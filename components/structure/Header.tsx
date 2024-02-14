@@ -4,6 +4,6 @@ type Props = {}
 
 export default function Header({}: Props) {
   return (
-    <div>Header</div>
+    <header className='px-5 w-full h-20 primaryContainer flex items-center justify-between'>Header</header>
   )
 }
