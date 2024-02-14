@@ -22,7 +22,7 @@ export default function Header({}: Props) {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger id='navigationTrigger'>
+            <NavigationMenuTrigger id='navigationTrigger' className='p-0'>
               <div className='flex flex-col gap-[0.20rem]'>
                 <span className="border-b-2 border-[#FF7F23] w-4"></span>
                 <span className="border-b-2 border-[#FF7F23] w-4"></span>
