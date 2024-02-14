@@ -1,11 +1,11 @@
-import {Header} from "@/components"
+
+import { Header } from "@/components/index";
 
 export default function Home() {
   return (
-    <div className='w-screen h-screen'>
-      <Header/>
-      <main>       
-      </main>
+    <div className="w-screen h-screen background">
+      <Header />
+      <main></main>
     </div>
-  )
+  );
 }

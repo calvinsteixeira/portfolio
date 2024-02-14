@@ -1,5 +1,3 @@
 import Header from "./structure/Header";
 
-export {
-  Header
-}
+export { Header }
