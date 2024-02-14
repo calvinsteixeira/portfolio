@@ -36,7 +36,15 @@
     @apply bg-[#F1F1F1]
   }
 
+  .primaryContainerText {
+    @apply text-[#313131]
+  }
+
   .secondaryContainer {
     @apply bg-[#313131]
   }  
+
+  .secondaryContainerText {
+    @apply text-[#f1f1f1]
+  }
 }
