@@ -1,7 +1,11 @@
+import {Header} from "@/components"
+
 export default function Home() {
   return (
-    <main>
-      <div>Commit inicial</div>
-    </main>
+    <div className='w-screen h-screen'>
+      <Header/>
+      <main>       
+      </main>
+    </div>
   )
 }
