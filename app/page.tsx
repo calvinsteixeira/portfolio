@@ -11,7 +11,7 @@ import {
   SiAntdesign,
 } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaDatabase, FaGitAlt, FaExternalLinkAlt, FaReact } from "react-icons/fa";
+import { FaDatabase, FaGitAlt, FaReact } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -44,7 +44,7 @@ export default function Home() {
         </section>
         <section className="section flex flex-col justify-center">
           <h3 className="text-2xl font-extrabold sectionTitle text-center">
-            Algumas das tecnologias que já utilizei.
+            Minhas principais tecnologias.
           </h3>
           <div className='flex flex-col gap-2'>
             <TechAccordion icon={<FaReact className='text-3xl' />} label="React/React Native" description="Biblioteca JavaScript para construir interfaces de usuário, mantendo um estado e renderizando componentes de forma eficiente." />
