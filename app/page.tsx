@@ -1,8 +1,18 @@
 import { Header, Button, TechContainer } from "@/components/index";
 import { FaReact } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiAxios, SiJquery, SiExpo, SiNodedotjs, SiExpress, SiSequelize, SiAntdesign  } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiAxios,
+  SiJquery,
+  SiExpo,
+  SiNodedotjs,
+  SiExpress,
+  SiSequelize,
+  SiAntdesign,
+} from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaDatabase, FaGitAlt  } from "react-icons/fa";
+import { FaDatabase, FaGitAlt, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -33,64 +43,96 @@ export default function Home() {
             crítico.
           </p>
         </section>
-        <section className="section">
+        <section className="section flex flex-col justify-center">
           <h3 className="text-2xl font-extrabold sectionTitle text-center">
-            Tecnologias que poderá encontrar em meus projetos
+            Algumas das tecnologias que já utilizei.
           </h3>
-          <div className="flex flex-wrap gap-4 items-center">
-            <div className="flex gap-4 items-center justify-center w-full">
-              <TechContainer>
-                <FaReact className="text-3xl" />
-              </TechContainer>
-              <TechContainer>
+          <div className="flex flex-wrap gap-4 items-center justify-center">
+            <TechContainer>
+              <div className="w-full flex gap-3 items-center justify-between">
+                <div className='flex gap-3 items-center'>
+                  <FaReact className="text-3xl" />
+                  <p className="text-sm">React/React Native</p>
+                </div>
+                <FaExternalLinkAlt className='primaryText text-sm'/>
+              </div>
+            </TechContainer>
+            <TechContainer>
+              <div className="flex gap-3 items-center justify-center">
                 <SiNextdotjs className="text-3xl" />
-              </TechContainer>
-              <TechContainer>
+                <p className="text-sm">Next JS</p>
+              </div>
+            </TechContainer>
+            <TechContainer>
+              <div className="flex gap-3 items-center justify-center">
                 <BiLogoTypescript className="text-3xl" />
-              </TechContainer>
-            </div>
+                <p className="text-sm">Typescript</p>
+              </div>
+            </TechContainer>
 
-            <div className="flex gap-4 items-center justify-center w-full">
-              <TechContainer>
+            <TechContainer>
+              <div className="flex gap-3 items-center justify-center">
                 <SiTailwindcss className="text-3xl" />
-              </TechContainer>
-              <TechContainer>
+                <p className="text-sm">Tailwind</p>
+              </div>
+            </TechContainer>
+            <TechContainer>
+              <div className="flex gap-3 items-center justify-center">
                 <SiAxios className="text-3xl" />
-              </TechContainer>
-            </div>
+                <p className="text-sm">Axios</p>
+              </div>
+            </TechContainer>
 
-            <div className="flex gap-4 items-center justify-center w-full">
-              <TechContainer>
+            <TechContainer>
+              <div className="flex gap-3 items-center justify-center">
                 <SiJquery className="text-3xl" />
-              </TechContainer>
-              <TechContainer>
+                <p className="text-sm">Jquery</p>
+              </div>
+            </TechContainer>
+            <TechContainer>
+              <div className="flex gap-3 items-center justify-center">
                 <SiExpo className="text-3xl" />
-              </TechContainer>
-              <TechContainer>
+                <p className="text-sm">Expo</p>
+              </div>
+            </TechContainer>
+            <TechContainer>
+              <div className="flex gap-3 items-center justify-center">
                 <SiNodedotjs className="text-3xl" />
-              </TechContainer>
-            </div>
+                <p className="text-sm">Node JS</p>
+              </div>
+            </TechContainer>
 
-            <div className="flex gap-4 items-center justify-center w-full">
-              <TechContainer>
+            <TechContainer>
+              <div className="flex gap-3 items-center justify-center">
                 <SiExpress className="text-3xl" />
-              </TechContainer>
-              <TechContainer>
+                <p className="text-sm">Express JS</p>
+              </div>
+            </TechContainer>
+            <TechContainer>
+              <div className="flex gap-3 items-center justify-center">
                 <SiSequelize className="text-3xl" />
-              </TechContainer>
-            </div>
+                <p className="text-sm">Sequelize</p>
+              </div>
+            </TechContainer>
 
-            <div className="flex gap-4 items-center justify-center w-full">
-              <TechContainer>
+            <TechContainer>
+              <div className="flex gap-3 items-center justify-center">
                 <FaDatabase className="text-3xl" />
-              </TechContainer>
-              <TechContainer>
+                <p className="text-sm">SQL</p>
+              </div>
+            </TechContainer>
+            <TechContainer>
+              <div className="flex gap-3 items-center justify-center">
                 <FaGitAlt className="text-3xl" />
-              </TechContainer>
-              <TechContainer>
+                <p className="text-sm">Git</p>
+              </div>
+            </TechContainer>
+            <TechContainer>
+              <div className="flex gap-3 items-center justify-center">
                 <SiAntdesign className="text-3xl" />
-              </TechContainer>
-            </div>
+                <p className="text-sm">Ant Desing</p>
+              </div>
+            </TechContainer>
           </div>
         </section>
       </main>
