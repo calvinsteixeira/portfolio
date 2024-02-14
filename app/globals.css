@@ -11,8 +11,12 @@
 @layer components {
 
   .section {
-    @apply py-4 px-10 w-full
+    @apply py-14 px-5 w-full
   }
+
+  .sectionTitle {
+    @apply mb-5
+  }  
 }
 
 @layer utilities {
