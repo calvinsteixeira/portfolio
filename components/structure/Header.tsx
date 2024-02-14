@@ -1,17 +1,15 @@
 "use client";
 
 import React from "react";
+import { IoLinkSharp } from "react-icons/io5";
 
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
-  navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
 
 type Props = {};
@@ -22,18 +20,26 @@ export default function Header({}: Props) {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger id='navigationTrigger' className='p-0'>
-              <div className='flex flex-col gap-[0.20rem]'>
+            <NavigationMenuTrigger id="navigationTrigger" className="p-0">
+              <div className="flex flex-col gap-[0.20rem]">
                 <span className="border-b-2 border-[#FF7F23] w-4"></span>
                 <span className="border-b-2 border-[#FF7F23] w-4"></span>
                 <span className="border-b-2 border-[#FF7F23] w-4"></span>
               </div>
             </NavigationMenuTrigger>
             <NavigationMenuContent className="primaryContainer primaryText w-52 py-4 px-4 flex flex-col gap-4">
-              <NavigationMenuLink>Sobre</NavigationMenuLink>
-              <NavigationMenuLink>Tecnologias</NavigationMenuLink>
-              <NavigationMenuLink>Projetos</NavigationMenuLink>
-              <NavigationMenuLink>Contato</NavigationMenuLink>
+              <NavigationMenuLink className="flex gap-1 items-center">
+                <p className="secondaryText text-xs">#</p> Sobre
+              </NavigationMenuLink>
+              <NavigationMenuLink className="flex gap-1 items-center">
+                <p className="secondaryText text-xs">#</p> Tecnologias
+              </NavigationMenuLink>
+              <NavigationMenuLink className="flex gap-1 items-center">
+                <p className="secondaryText text-xs">#</p> Projetos
+              </NavigationMenuLink>
+              <NavigationMenuLink className="flex gap-1 items-center">
+                <p className="secondaryText text-xs">#</p> Contato
+              </NavigationMenuLink>
             </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
