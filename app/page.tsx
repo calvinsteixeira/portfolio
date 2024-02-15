@@ -3,6 +3,7 @@ import {
   Button,
   TecnologiesList,
   AnimatedWrapper,
+  ContactForm
 } from "@/components/index";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
@@ -71,8 +72,11 @@ export default function Home() {
               <p id='emailValue'>calvingsx@gmail.com</p>
             </div>
             <div className='mt-4 flex gap-3'>
-              <FaGithub className='text-2xl primaryText hover:secondaryText'/>
-              <FaLinkedin className='text-2xl primaryText hover:secondaryText'/>
+              <FaGithub className='text-2xl primaryText hover:secondaryText' />
+              <FaLinkedin className='text-2xl primaryText hover:secondaryText' />
+            </div>
+            <div className='mt-6'>
+              <ContactForm />
             </div>
           </div>
         </section>
