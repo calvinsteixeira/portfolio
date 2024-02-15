@@ -1,7 +1,7 @@
 import Header from "./structure/Header";
-import TechAccordion from "./content/TechAccordion";
-import TecnologiesList from "./content/TecnologiesList";
+import TecnologieAccordion from "./content/Tecnologies/TecnologieAccordion";
+import TecnologiesList from "./content/Tecnologies/TecnologiesList";
 import AnimatedWrapper from "./animated/AnimatedWrapper";
 import { Button } from "./ui/button";
 
-export { Header, Button, TechAccordion, TecnologiesList, AnimatedWrapper }
+export { Header, Button, TecnologieAccordion, TecnologiesList, AnimatedWrapper }
