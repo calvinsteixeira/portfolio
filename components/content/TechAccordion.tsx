@@ -18,7 +18,7 @@ export default function TechAccordion({ icon, label, description }: Props) {
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value="item-1">
-        <AccordionTrigger className='flex gap-3 primaryContainer px-4'>
+        <AccordionTrigger className='flex gap-3 primaryContainer px-4 py-1'>
           <div className='flex gap-3 items-center'>
             {icon}
             <p className="text-sm">{label}</p>            
