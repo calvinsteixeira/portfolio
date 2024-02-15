@@ -1,4 +1,9 @@
-import { Header, Button, TecnologiesList } from "@/components/index";
+import {
+  Header,
+  Button,
+  TecnologiesList,
+  AnimatedWrapper,
+} from "@/components/index";
 
 export default function Home() {
   return (
@@ -6,15 +11,26 @@ export default function Home() {
       <Header />
       <main>
         <section className="section">
-          <h3 className="text-2xl font-extrabold sectionTitle">
-            Seja bem vindo
-          </h3>
-          <p>
-            Esse é meu portfólio, nele você encontrará alguns dados meus e
-            projetos que já realizei. Sinta-se a vontade para realizar qualquer
-            questionamento através da página de contato.
-          </p>
-          <Button className="mt-4">Entrar em contato</Button>
+          <AnimatedWrapper
+            animationType="fade"
+            fadeProps={{ direction: "right", triggerOnce: true }}
+          >
+            <h3 className="text-2xl font-extrabold sectionTitle">
+              Seja bem vindo
+            </h3>
+          </AnimatedWrapper>
+
+          <AnimatedWrapper animationType="fade" fadeProps={{ direction: "up", delay: 400, triggerOnce: true }}>
+            <p>
+              Esse é meu portfólio, nele você encontrará alguns dados meus e
+              projetos que já realizei. Sinta-se a vontade para realizar
+              qualquer questionamento através da página de contato.
+            </p>
+          </AnimatedWrapper>
+
+          <AnimatedWrapper animationType="fade" fadeProps={{ direction: "up", delay: 900, triggerOnce: true }}>
+            <Button className="mt-4">Entrar em contato</Button>
+          </AnimatedWrapper>
         </section>
         <section className="section primaryContainer">
           <h3 className="text-2xl font-extrabold sectionTitle text-right">

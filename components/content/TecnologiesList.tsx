@@ -21,7 +21,7 @@ type Props = {};
 
 export default function TecnologiesList({}: Props) {
   return (
-    <Fade cascade duration={500} triggerOnce>
+    <Slide duration={500} triggerOnce>
       <TechAccordion
         icon={<FaReact className="text-3xl text-cyan-500" />}
         label="React/React Native"
@@ -87,6 +87,6 @@ export default function TecnologiesList({}: Props) {
         label="Ant Design"
         description="Biblioteca de componentes UI para React, que fornece uma variedade de componentes prontos para uso seguindo as diretrizes de design do Ant Design System, visando criar interfaces de usuário consistentes e de alta qualidade."
       />
-    </Fade>
+    </Slide>
   );
 }
