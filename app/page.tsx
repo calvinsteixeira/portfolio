@@ -5,12 +5,14 @@ import {
   AnimatedWrapper,
 } from "@/components/index";
 
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+
 export default function Home() {
   return (
     <div className="w-screen h-screen background">
       <Header />
       <main>
-        <section className="section">
+        <section className="section primaryText">
           <AnimatedWrapper
             animationType="fade"
             fadeProps={{ direction: "right", triggerOnce: true }}
@@ -32,7 +34,7 @@ export default function Home() {
             <Button className="mt-4">Entrar em contato</Button>
           </AnimatedWrapper>
         </section>
-        <section className="section primaryContainer">
+        <section className="section primaryContainer primaryContainerText">
           <h3 className="text-2xl font-extrabold sectionTitle text-right">
             Sobre mim
           </h3>
@@ -51,6 +53,27 @@ export default function Home() {
           </h3>
           <div className="flex flex-col gap-2">
             <TecnologiesList />
+          </div>
+        </section>
+        <section className="section flex flex-col primaryContainer primaryContainerText justify-center items-center gap-3">
+          <h3 className="text-2xl font-extrabold sectionTitle text-center">
+            Projetos.
+          </h3>
+          <p>Seção em desenvolvimento</p>
+        </section>
+        <section className="section flex flex-col  primaryText gap-3">
+          <h3 className="text-2xl font-extrabold sectionTitle">
+            Contato
+          </h3>
+          <div className='flex flex-col gap-2'>
+            <div className='flex' >
+              <strong><label htmlFor="emailValue">Email: </label></strong>
+              <p id='emailValue'>calvingsx@gmail.com</p>
+            </div>
+            <div className='mt-4 flex gap-3'>
+              <FaGithub className='text-2xl primaryText hover:secondaryText'/>
+              <FaLinkedin className='text-2xl primaryText hover:secondaryText'/>
+            </div>
           </div>
         </section>
       </main>
