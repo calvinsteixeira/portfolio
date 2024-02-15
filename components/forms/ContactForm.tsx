@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from '../ui/textarea'
 import { Loader2, Send, Check } from 'lucide-react'
+import { AlertContainer } from '@/components/index'
 
 import {
   Form,
@@ -63,7 +64,9 @@ export default function ContactForm({ }: Props) {
   }
 
   return (
-    <Form {...form}>
+    <>
+      <AlertContainer/>
+      <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
@@ -114,5 +117,7 @@ export default function ContactForm({ }: Props) {
         </Button>
       </form>
     </Form>
+    </>
+    
   )
 }
