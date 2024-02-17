@@ -21,23 +21,21 @@ import {
 
 type Props = {};
 type AlertSettings = {
-  title: string,
-  description: string,
-  type: 'destructive' | 'success',
-  visible: boolean
-}
+  title: string;
+  description: string;
+  type: "destructive" | "success";
+  visible: boolean;
+};
 
 export default function ContactForm({}: Props) {
   const [submitingForm, setSubmitingForm] = React.useState<boolean>(false);
-  const [contactRequestSuccess, setContactRequestSuccess] =
-    React.useState<boolean>(false);
-  const [contactAlertFeedbackSettings, setContactAlertFeedbackSettings] = React.useState<AlertSettings>({
-    title: "Default title",
-    description: "Default description",
-    type: 'destructive',
-    visible: true
-  })
-  
+  const [contactAlertSettings, setContactAlertSettings] =
+    React.useState<AlertSettings>({
+      title: "Default title",
+      description: "Default description",
+      type: "destructive",
+      visible: false,
+    });
 
   const formSchema = z.object({
     userName: z.string().min(2, {
@@ -62,33 +60,43 @@ export default function ContactForm({}: Props) {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    setSubmitingForm(true);   
+    setSubmitingForm(true);
 
     setTimeout(() => {
-      setSubmitingForm(false)
-      setContactRequestSuccess(true)
+      setSubmitingForm(false);
+
+      setContactAlertSettings({
+        title: "Sucesso",
+        description: "Mensagem enviada com sucesso",
+        type: "success",
+        visible: true,
+      });
+      form.reset({
+        userName: "",
+        userEmail: "",
+        userMessage: "",
+      });
 
       setTimeout(() => {
-        setContactRequestSuccess(false)
-        form.reset({
-          userName: '',
-          userEmail: '',
-          userMessage: ''
+        setContactAlertSettings({
+          title: "Sucesso",
+          description: "Mensagem enviada com sucesso",
+          type: "success",
+          visible: false,
         });
-      }, 3000)
-
-    }, 3000)
+      }, 4000);
+    }, 3000);
   }
 
   return (
     <>
-      {contactAlertFeedbackSettings.visible && (
-        <AlertContainer
-          title={contactAlertFeedbackSettings.title}
-          description={contactAlertFeedbackSettings.description}
-          type={contactAlertFeedbackSettings.type}
-        />
-      )}
+      <AlertContainer
+        title={contactAlertSettings.title}
+        description={contactAlertSettings.description}
+        type={contactAlertSettings.type}
+        visible={contactAlertSettings.visible}
+      />
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <FormField
@@ -98,9 +106,7 @@ export default function ContactForm({}: Props) {
               <FormItem>
                 <FormControl>
                   <Input
-                    disabled={
-                      submitingForm || contactRequestSuccess ? true : false
-                    }
+                    disabled={submitingForm ? true : false}
                     placeholder="digite seu nome"
                     className={
                       form.formState.errors.userName ? "border-red-500" : ""
@@ -123,9 +129,7 @@ export default function ContactForm({}: Props) {
               <FormItem>
                 <FormControl>
                   <Input
-                    disabled={
-                      submitingForm || contactRequestSuccess ? true : false
-                    }
+                    disabled={submitingForm ? true : false}
                     placeholder="digite seu email"
                     className={
                       form.formState.errors.userEmail ? "border-red-500" : ""
@@ -148,9 +152,7 @@ export default function ContactForm({}: Props) {
               <FormItem>
                 <FormControl>
                   <Textarea
-                    disabled={
-                      submitingForm || contactRequestSuccess ? true : false
-                    }
+                    disabled={submitingForm ? true : false}
                     placeholder="digite sua mensagem"
                     className={
                       form.formState.errors.userMessage ? "border-red-500" : ""
@@ -166,11 +168,7 @@ export default function ContactForm({}: Props) {
               </FormItem>
             )}
           />
-          <Button
-            disabled={submitingForm ? true : false}
-            type="submit"
-            className={contactRequestSuccess ? "bg-green-600" : ""}
-          >
+          <Button disabled={submitingForm ? true : false} type="submit">
             {submitingForm ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Enviando sua
