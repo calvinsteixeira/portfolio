@@ -4,6 +4,7 @@ import {
   TecnologiesList,
   AnimatedWrapper,
   ContactForm,
+  Footer
 } from "@/components/index";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
@@ -81,9 +82,9 @@ export default function Home() {
         <section className="section flex flex-col  primaryText gap-3">
           <h3 className="text-2xl font-extrabold sectionTitle">Contato</h3>
           <div className="flex flex-col gap-2">
-            <div className="flex">
+            <div className="flex gap-1">
               <strong>
-                <label htmlFor="emailValue">Email: </label>
+                <label htmlFor="emailValue">Email:</label>
               </strong>
               <p id="emailValue">calvingsx@gmail.com</p>
             </div>
@@ -97,6 +98,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Footer/>
     </div>
   );
 }
