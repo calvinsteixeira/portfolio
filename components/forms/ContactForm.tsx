@@ -4,6 +4,7 @@ import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import axios from 'axios';
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,7 +20,11 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-type Props = {};
+type emailRequestType = {
+  name: string,
+  message: string,
+  _template: string
+};
 type AlertSettings = {
   title: string;
   description: string;
@@ -27,7 +32,7 @@ type AlertSettings = {
   visible: boolean;
 };
 
-export default function ContactForm({}: Props) {
+export default function ContactForm() {
   const [submitingForm, setSubmitingForm] = React.useState<boolean>(false);
   const [contactAlertSettings, setContactAlertSettings] =
     React.useState<AlertSettings>({
@@ -35,7 +40,7 @@ export default function ContactForm({}: Props) {
       description: "Default description",
       type: "destructive",
       visible: false,
-    });
+    });    
 
   const formSchema = z.object({
     userName: z.string().min(2, {
@@ -58,34 +63,59 @@ export default function ContactForm({}: Props) {
       userMessage: "",
     },
   });
+ 
+  function clearContactAlertSettings() {
+    setContactAlertSettings({
+      title: '',
+      description: '',
+      type: 'success',
+      visible: false
+    })
+  }
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    setSubmitingForm(true);
+    setSubmitingForm(true)
+    const requestSchema: emailRequestType = {
+      name: values.userName,
+      message: values.userMessage,
+      _template: 'table'
+    }
 
-    setTimeout(() => {
-      setSubmitingForm(false);
-
-      setContactAlertSettings({
-        title: "Sucesso",
-        description: "Mensagem enviada com sucesso",
-        type: "success",
-        visible: true,
-      });
-      form.reset({
-        userName: "",
-        userEmail: "",
-        userMessage: "",
-      });
-
-      setTimeout(() => {
+    axios.post('https://formsubmit.co/9fe8a91af759ac5f4540c3561865f9d2', requestSchema)
+    .then((response: any) => {
+      if(response.status == 200){
+        console.log(response)
+        setSubmitingForm(false)
         setContactAlertSettings({
-          title: "Sucesso",
-          description: "Mensagem enviada com sucesso",
+          title: "Tudo certo!",
+          description: "Sua mensagem foi enviada com sucesso",
           type: "success",
-          visible: false,
-        });
-      }, 4000);
-    }, 3000);
+          visible: true
+        })
+        form.reset({
+          userName: '',
+          userEmail: '',
+          userMessage: ''
+        })
+        setTimeout(() => clearContactAlertSettings(), 4000)        
+      }
+    })
+    .catch((error: any) => {
+      console.log(error)
+      setSubmitingForm(false)
+      setContactAlertSettings({
+        title: "Falha",
+        description: "Falha no envio da sua mensagem, por favor tente novamente.",
+        type: "destructive",
+        visible: true
+      })
+      form.reset({
+        userName: '',
+        userEmail: '',
+        userMessage: ''
+      })
+      setTimeout(() => clearContactAlertSettings(), 4000)      
+    });    
   }
 
   return (

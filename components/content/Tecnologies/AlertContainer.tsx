@@ -18,14 +18,13 @@ export default function AlertContainer({
     type == "destructive" ? "bg-red-700 text-white" : "bg-green-600 text-white";
 
   return (
-    
-      <Alert
-        className={`${
-          visible ? "fixed" : "hidden"
-        } ${alertTypeStyle} border-transparent right-3 top-3 max-w-[80%] shadow-lg`}
-      >
-        <AlertTitle>{title}</AlertTitle>
-        <AlertDescription>{description}</AlertDescription>
-      </Alert>
+    <Alert
+      className={`${
+        visible ? "fixed" : "hidden"
+      } ${alertTypeStyle} border-transparent rounded right-3 top-3 max-w-[80%] shadow-lg`}
+    >
+      <AlertTitle>{title}</AlertTitle>
+      <AlertDescription className="mt-2">{description}</AlertDescription>
+    </Alert>
   );
 }
