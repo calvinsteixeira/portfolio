@@ -33,7 +33,7 @@
   }
 
   .primaryContainer {
-    @apply bg-[#F1F1F1]
+    @apply bg-[#f1f1f1]
   }
 
   .primaryContainerText {

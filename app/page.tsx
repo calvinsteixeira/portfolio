@@ -20,7 +20,7 @@ export default function Home() {
             fadeProps={{ direction: "right", triggerOnce: true }}
           >
             <h3 className="text-2xl font-extrabold sectionTitle">
-              Seja bem vindo
+              Hello World!
             </h3>
           </AnimatedWrapper>
 
@@ -29,9 +29,7 @@ export default function Home() {
             fadeProps={{ direction: "up", delay: 400, triggerOnce: true }}
           >
             <p>
-              Esse é meu portfólio, nele você encontrará alguns dados meus e
-              projetos que já realizei. Sinta-se a vontade para realizar
-              qualquer questionamento através da página de contato.
+              Me chamo Calvin, sou desenvolvedor full stack com um olhar especial para o Front-End, atualmente tenho 2 anos de experiência CLT + projetos de estudo.
             </p>
           </AnimatedWrapper>
 
@@ -56,12 +54,7 @@ export default function Home() {
             fadeProps={{ direction: "up", delay: 900, triggerOnce: true }}
           >
             <p className="text-right">
-              Sou desenvolvedor de software à 2 anos, atuo como full stack mas
-              centralizo maior parte dos meus estudos na stack de Front-End.
-              Antes de me tornar desenvolvedor, trabalhei por 8 anos na área de
-              marketing digital como líder de projetos e coordenador do setor,
-              experiência no qual me deu muita visão de negócio, cautela e senso
-              crítico.
+              Moro em Santa Maria/RS, sou apaixonado por aventuras de moto e escrever códigos. Alguns destaques meus ficam com minhas habilidades de comunicação, organização e liderança.
             </p>
           </AnimatedWrapper>
         </section>
@@ -69,7 +62,7 @@ export default function Home() {
           <h3 className="text-2xl font-extrabold sectionTitle text-center">
             Minhas principais tecnologias.
           </h3>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             <TecnologiesList />
           </div>
         </section>
