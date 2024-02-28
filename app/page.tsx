@@ -28,7 +28,7 @@ export default function Home() {
             animationType="fade"
             fadeProps={{ direction: "up", delay: 400, triggerOnce: true }}
           >
-            <p>
+            <p className='md:max-w-[60%]'>
               Me chamo Calvin, sou desenvolvedor full stack com um olhar especial para o Front-End, atualmente tenho 2 anos de experiência CLT + projetos de estudo.
             </p>
           </AnimatedWrapper>
@@ -40,7 +40,7 @@ export default function Home() {
             <Button className="mt-4">Entrar em contato</Button>
           </AnimatedWrapper>
         </section>
-        <section className="section primaryContainer primaryContainerText">
+        <section className="section primaryContainer primaryContainerText flex flex-col">
           <AnimatedWrapper
             animationType="fade"
             fadeProps={{ direction: "right", delay: 900, triggerOnce: true }}
@@ -53,9 +53,11 @@ export default function Home() {
             animationType="fade"
             fadeProps={{ direction: "up", delay: 900, triggerOnce: true }}
           >
-            <p className="text-right">
-              Moro em Santa Maria/RS, sou apaixonado por aventuras de moto e escrever códigos. Alguns destaques meus ficam com minhas habilidades de comunicação, organização e liderança.
-            </p>
+            <div className="flex-grow flex justify-end">
+              <p className="md:max-w-[60%] text-right">
+                Moro em Santa Maria/RS, sou apaixonado por aventuras de moto e escrever códigos. Alguns destaques meus ficam com minhas habilidades de comunicação, organização e liderança.
+              </p>
+            </div>
           </AnimatedWrapper>
         </section>
         <section className="section flex flex-col justify-center">
@@ -91,7 +93,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
