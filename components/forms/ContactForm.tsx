@@ -128,7 +128,7 @@ export default function ContactForm() {
       />
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 md:max-w-[60%]">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 md:max-w-[45%]">
           <FormField
             control={form.control}
             name="userName"

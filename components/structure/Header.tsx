@@ -16,7 +16,7 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="px-5 w-full h-20 primaryContainer flex items-center justify-between">
+    <header className="px-5 md:px-10 w-full h-20 primaryContainer flex items-center justify-between">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>

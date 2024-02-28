@@ -11,7 +11,7 @@
 @layer components {
 
   .section {
-    @apply py-14 px-5 w-full
+    @apply py-14 px-5 md:px-10 w-full
   }
 
   .sectionTitle {

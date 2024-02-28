@@ -14,33 +14,38 @@ export default function Home() {
     <div className="w-screen h-screen background">
       <Header />
       <main>
-        <section className="section primaryText">
-          <AnimatedWrapper
-            animationType="fade"
-            fadeProps={{ direction: "right", triggerOnce: true }}
-          >
-            <h3 className="text-2xl font-extrabold sectionTitle">
-              Hello World!
-            </h3>
-          </AnimatedWrapper>
+        <section className="section primaryText md:flex md:flex-row md:gap-10 items-center lg:h-screen">
+          <div className='md:max-w-[60%]'>
+            <AnimatedWrapper
+              animationType="fade"
+              fadeProps={{ direction: "right", triggerOnce: true }}
+            >
+              <h3 className="text-2xl font-extrabold sectionTitle flex flex-row flex-wrap gap-2">
+                Olá {<AnimatedWrapper
+                  animationType="attentionSeeker"                  
+                  attentionSeekerProps={{ delay: 200 ,effect: 'tada' }}
+                ><span className='md:hidden'>👋</span></AnimatedWrapper>}. Me chamo<span className='secondaryText'>Calvin</span>, sou desenvolvedor Full Stack com paixão por Front-End.
+              </h3>
+
+            </AnimatedWrapper>
+            <AnimatedWrapper
+              animationType="fade"
+              fadeProps={{ direction: "up", delay: 400, triggerOnce: true }}
+            >
+              <p>
+                Atualmente tenho 2 anos de experiência e alguns projetos de estudo em andamento. Estudo Análise e Desenvolvimento de sistemas.
+              </p>
+            </AnimatedWrapper>
+          </div>
 
           <AnimatedWrapper
-            animationType="fade"
-            fadeProps={{ direction: "up", delay: 400, triggerOnce: true }}
+            animationType="attentionSeeker"
+            attentionSeekerProps={{ delay: 200, className: 'hidden md:flex', effect: 'tada' }}
           >
-            <p className='md:max-w-[60%]'>
-              Me chamo Calvin, sou desenvolvedor full stack com um olhar especial para o Front-End, atualmente tenho 2 anos de experiência CLT + projetos de estudo.
-            </p>
-          </AnimatedWrapper>
-
-          <AnimatedWrapper
-            animationType="fade"
-            fadeProps={{ direction: "up", delay: 900, triggerOnce: true }}
-          >
-            <Button className="mt-4">Entrar em contato</Button>
+            <span className='text-9xl'>👋</span>
           </AnimatedWrapper>
         </section>
-        <section className="section primaryContainer primaryContainerText flex flex-col">
+        {/* <section className="section primaryContainer primaryContainerText flex flex-col">
           <AnimatedWrapper
             animationType="fade"
             fadeProps={{ direction: "right", delay: 900, triggerOnce: true }}
@@ -59,22 +64,22 @@ export default function Home() {
               </p>
             </div>
           </AnimatedWrapper>
-        </section>
-        <section className="section flex flex-col justify-center">
+        </section> */}
+        {/* <section className="section flex flex-col justify-center">
           <h3 className="text-2xl font-extrabold sectionTitle text-center">
             Minhas principais tecnologias.
           </h3>
           <div className="flex flex-wrap justify-center gap-2">
             <TecnologiesList />
           </div>
-        </section>
-        <section className="section flex flex-col primaryContainer primaryContainerText justify-center items-center gap-3">
+        </section> */}
+        {/* <section className="section flex flex-col primaryContainer primaryContainerText justify-center items-center gap-3">
           <h3 className="text-2xl font-extrabold sectionTitle text-center">
             Projetos.
           </h3>
           <p>Seção em desenvolvimento</p>
-        </section>
-        <section className="section flex flex-col  primaryText gap-3">
+        </section> */}
+        {/* <section className="section flex flex-col  primaryText gap-3">
           <h3 className="text-2xl font-extrabold sectionTitle">Contato</h3>
           <div className="flex flex-col gap-2">
             <div className="flex gap-1">
@@ -91,9 +96,9 @@ export default function Home() {
               <ContactForm />
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
-      <Footer />
-    </div>
+      {/* <Footer /> */}
+    </div >
   );
 }
