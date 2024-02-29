@@ -16,8 +16,8 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="px-5 md:px-10 w-full h-20 primaryContainer flex items-center justify-between">
-      <NavigationMenu>
+    <header className="px-5 md:px-10 lg:px-20 fixed z-10 w-full h-20 xl:h-28 primaryContainer flex items-center justify-between">
+      {/* <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger id="navigationTrigger" className="p-0">
@@ -43,8 +43,8 @@ export default function Header({}: Props) {
             </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
-      </NavigationMenu>
-      <h1 className="font-extrabold text-sm">
+      </NavigationMenu> */}
+      <h1 className="font-extrabold text-sm xl:text-2xl">
         {"<Calvin"}
         <span className="secondaryText">{".Teixeira>"}</span>
       </h1>

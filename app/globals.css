@@ -6,16 +6,20 @@
   body {
     @apply p-0 m-0 box-border
   }
+
+  main {
+    @apply pt-12
+  }
 }
 
 @layer components {
 
   .section {
-    @apply py-14 px-5 md:px-10 w-full
+    @apply py-14 px-5 md:px-10 lg:px-20 w-full
   }
 
   .sectionTitle {
-    @apply mb-5
+    @apply mb-5 text-2xl 2xl:text-5xl xl:text-4xl
   }  
 }
 
