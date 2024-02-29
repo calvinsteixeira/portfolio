@@ -4,10 +4,11 @@ import {
   TecnologiesList,
   AnimatedWrapper,
   ContactForm,
-  Footer
+  Footer,
 } from "@/components/index";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -15,56 +16,77 @@ export default function Home() {
       <Header />
       <main>
         <section className="section primaryText md:flex md:flex-row md:gap-10 items-center lg:h-screen">
-          <div className='md:max-w-[60%]'>
+          <div className="md:max-w-[60%]">
             <AnimatedWrapper
               animationType="fade"
               fadeProps={{ direction: "right", triggerOnce: true }}
             >
-              <h3 className="text-2xl font-extrabold sectionTitle flex flex-row flex-wrap gap-2">
-                Olá {<AnimatedWrapper
-                  animationType="attentionSeeker"                  
-                  attentionSeekerProps={{ delay: 200 ,effect: 'tada' }}
-                ><span className='md:hidden'>👋</span></AnimatedWrapper>}. Me chamo<span className='secondaryText'>Calvin</span>, sou desenvolvedor Full Stack com paixão por Front-End.
+              <h3 className="text-2xl font-extrabold sectionTitle">
+                Olá, <span className="md:hidden">👋</span>me chamo
+                <span className="secondaryText"> Calvin</span>, sou
+                desenvolvedor Full Stack com paixão por Front-End.
               </h3>
-
             </AnimatedWrapper>
             <AnimatedWrapper
               animationType="fade"
               fadeProps={{ direction: "up", delay: 400, triggerOnce: true }}
             >
               <p>
-                Atualmente tenho 2 anos de experiência e alguns projetos de estudo em andamento. Estudo Análise e Desenvolvimento de sistemas.
+                Atualmente tenho 2 anos de experiência e alguns projetos de
+                estudo em andamento. Além disso, estudo Análise e
+                Desenvolvimento de sistemas.
               </p>
             </AnimatedWrapper>
           </div>
 
           <AnimatedWrapper
             animationType="attentionSeeker"
-            attentionSeekerProps={{ delay: 200, className: 'hidden md:flex', effect: 'tada' }}
+            attentionSeekerProps={{
+              delay: 200,
+              className: "hidden md:flex",
+              effect: "tada",
+            }}
           >
-            <span className='text-9xl'>👋</span>
+            <span className="text-9xl">👋</span>
           </AnimatedWrapper>
         </section>
-        {/* <section className="section primaryContainer primaryContainerText flex flex-col">
+        <section className="section primaryContainer md:flex-row-reverse primaryContainerText flex flex-col">
+          <div className="md:max-w-[60%]">
+            <AnimatedWrapper
+              animationType="fade"
+              fadeProps={{ direction: "right", delay: 900, triggerOnce: true }}
+            >
+              <h3 className="text-2xl font-extrabold sectionTitle text-right">
+                Sobre mim
+              </h3>
+            </AnimatedWrapper>
+            <AnimatedWrapper
+              animationType="fade"
+              fadeProps={{ direction: "up", delay: 900, triggerOnce: true }}
+            >
+              <div className="flex-grow flex justify-end">
+                <p className="text-right">
+                  Moro em Santa Maria/RS, sou apaixonado por aventuras de moto e
+                  programação. Alguns destaques meus ficam com minhas
+                  habilidades de comunicação, organização e liderança.
+                </p>
+              </div>
+            </AnimatedWrapper>
+          </div>
+
           <AnimatedWrapper
             animationType="fade"
-            fadeProps={{ direction: "right", delay: 900, triggerOnce: true }}
+            fadeProps={{ direction: "right", className: 'self-end',delay: 900, triggerOnce: true }}
           >
-            <h3 className="text-2xl font-extrabold sectionTitle text-right">
-              Sobre mim
-            </h3>
+            <Image
+              src="/assets/minha-foto.jpg"
+              width={150}
+              height={150}
+              alt="Picture of the author"
+              className="rounded-full self-end mt-8 shadow-lg  md:mr-16"
+            />
           </AnimatedWrapper>
-          <AnimatedWrapper
-            animationType="fade"
-            fadeProps={{ direction: "up", delay: 900, triggerOnce: true }}
-          >
-            <div className="flex-grow flex justify-end">
-              <p className="md:max-w-[60%] text-right">
-                Moro em Santa Maria/RS, sou apaixonado por aventuras de moto e escrever códigos. Alguns destaques meus ficam com minhas habilidades de comunicação, organização e liderança.
-              </p>
-            </div>
-          </AnimatedWrapper>
-        </section> */}
+        </section>
         {/* <section className="section flex flex-col justify-center">
           <h3 className="text-2xl font-extrabold sectionTitle text-center">
             Minhas principais tecnologias.
@@ -99,6 +121,6 @@ export default function Home() {
         </section> */}
       </main>
       {/* <Footer /> */}
-    </div >
+    </div>
   );
 }
