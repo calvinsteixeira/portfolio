@@ -1,3 +1,4 @@
-import TechContainer from "./container/TechContainer";
+import Tech from "./container/Tech";
+import Project from "./container/Project"
 
-export { TechContainer }
+export { Tech, Project }
