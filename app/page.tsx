@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { TechContainer } from "@/components/index";
+import { FaReact, RiNextjsLine, SiExpo, FaNodeJs, DiJqueryLogo, TbBrandTypescript } from '@/icons'
 
 export default function Home() {
   return (
@@ -13,7 +15,7 @@ export default function Home() {
             style={{ borderRadius: "50%", marginBottom: 15 }}
           />
           <h4 className="text-2xl font-bold">
-            Olá, eu sou o
+            Olá, me chamo
           </h4>
           <h4 className="text-primary text-2xl font-bold">Calvin Teixeira</h4>
         </div>
@@ -34,6 +36,14 @@ export default function Home() {
             Algumas das principais tecnologias que eu utilizo ou já utilizei
             profissionalmente ou em projetos pessoais.
           </p>
+          <div className="mt-6 flex flex-col gap-3">          
+            <TechContainer techTitle="React/React Native" icon={<FaReact size={26}/>} description="Utilização do JSX, gestão de componentes utilizando props, context api ou ferramentas de gerenciamento de estados como o Zustand. Lyfecicle component, chamadas assíncronas, Hooks, composition pattern."/>
+            <TechContainer techTitle="Next JS" icon={<RiNextjsLine size={26}/>} description="Renderização híbrida (SSR e SSG), file router, deploy na vercel"/>   
+            <TechContainer techTitle="Expo" icon={<SiExpo size={26}/>} description="Expo cli, expo router, Expo SDK (notificações e componentes de hardware), EAS (deploy), async storage."/>    
+            <TechContainer techTitle="Typescript" icon={<TbBrandTypescript size={26}/>} description="Types assertions, generics, interfaces e tipos, integração com frameworks."/>  
+            <TechContainer techTitle="Node JS" icon={<FaNodeJs size={26}/>} description="Rest API com arquitetura MVC, utilização de JWT com refresh token, conexão com banco de dados mysql utilizando ORM Sequelize."/> 
+            <TechContainer techTitle="Jquery" icon={<DiJqueryLogo size={26}/>} description="Manipulação da DOM e utilização em conjunto de bibliotecas de componentes como o Dev Extreme."/>               
+          </div>
         </div>
       </div>
     </main>
