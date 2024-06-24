@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import { TechContainer } from "@/components/index";
 import {
@@ -9,8 +11,11 @@ import {
   TbBrandTypescript,
 } from "@/icons";
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter()
+
   return (
     <main className="mainContainer pb-24">
       <div className="w-full max-w-full text-foreground pt-16">
@@ -46,7 +51,8 @@ export default function Home() {
             <TechContainer
               techTitle="React/React Native"
               icon={<FaReact size={26} />}
-              description="Utilização do JSX, gestão de componentes utilizando props, context api ou ferramentas de gerenciamento de estados como o Zustand. Lyfecicle component, chamadas assíncronas, Hooks, composition pattern, bibliotecas de componentes como Shadcn, Ant Design e Material UI."
+              description="Utilização do JSX, gestão de componentes utilizando props, context api ou ferramentas de gerenciamento de estados como o Zustand. Lyfecicle component, 
+              chamadas assíncronas, Hooks, composition pattern, bibliotecas de componentes como Shadcn, Ant Design e Material UI."
             />
             <TechContainer
               techTitle="Next JS"
@@ -81,7 +87,7 @@ export default function Home() {
           <p>
             Gosto de me manter sempre atualizado, e encontrei nos projetos pessoais uma forma de praticar e testar meus conhecimentos.
           </p>
-          <Button className="mt-2 bg-primary text-[black]" variant="default">Acessar projetos</Button>
+          <Button onClick={() => router.push('/projetos')} className="mt-2 bg-primary text-[black]" variant="default">Acessar projetos</Button>
         </div>
       </div>
     </main>
