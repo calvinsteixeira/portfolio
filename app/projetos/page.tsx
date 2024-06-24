@@ -4,6 +4,6 @@ type Props = {}
 
 export default function Projetos({}: Props) {
   return (
-    <div>projetos</div>
+    <main className="mainContainer pb-24"></main>
   )
 }

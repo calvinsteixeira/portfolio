@@ -87,7 +87,7 @@ export default function Home() {
           <p>
             Gosto de me manter sempre atualizado, e encontrei nos projetos pessoais uma forma de praticar e testar meus conhecimentos.
           </p>
-          <Button onClick={() => router.push('/projetos')} className="mt-2 bg-primary text-[black]" variant="default">Acessar projetos</Button>
+          <Button onClick={() => router.push('/projetos')} className="mt-2 rounded-sm bg-primary text-[black]" variant="default">Acessar projetos</Button>
         </div>
       </div>
     </main>
