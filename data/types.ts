@@ -1,15 +1,15 @@
-import { Icon } from "next/dist/lib/metadata/types/metadata-types";
+import { IconType } from "react-icons";
 
 interface IProject {
   title: string;
-  cover: ImageBitmap;  
+  coverUrl: string;  
   deployUrl: string;
   githubUrl: string;
   tecnologies: IProjectTecnologie[]
 }
 
 interface IProjectTecnologie {
-  icon: Icon;  
+  icon: IconType;  
   name: string;
 }
 
