@@ -1,4 +1,4 @@
-import { IconType } from "react-icons";
+import { dbIconProjects } from "./data";
 
 interface IProject {
   title: string;
@@ -9,8 +9,8 @@ interface IProject {
 }
 
 interface IProjectTecnologie {
-  icon: IconType;  
-  name: string;
+  iconName: keyof typeof dbIconProjects;  
+  techName: string;
 }
 
 export type { IProject, IProjectTecnologie }
