@@ -1,1 +1,1 @@
-export { CodeXml } from 'lucide-react'
+export { CodeXml, ArrowDown } from 'lucide-react'

@@ -4,15 +4,15 @@ import * as Icons from "@/icons";
 import * as Componenets from "@/components/index";
 
 //UTILS
-import { Inconsolata } from 'next/font/google'
-const inconsolata = Inconsolata({ subsets: ['latin'] })
+import { Inconsolata } from "next/font/google";
+const inconsolata = Inconsolata({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <div>
       <main>
         {/* INTRO */}
-        <section className="relative w-full h-screen bg-primary overflow-hidden flex justify-center">
+        <section className="relative w-full h-screen bg-primary overflow-hidden flex justify-center pt-8">
           <div className="text-center z-10 text-white space-y-8 flex flex-col items-center">
             <div className="bg-foreground w-24 h-24 rounded-full relative border-2 border-primary">
               <div className="absolute z-10 w-24 h-24 rounded-full border-4 border-background "></div>
@@ -51,7 +51,7 @@ export default function Home() {
               <Componenets.Tech
                 techName="Typescript"
                 iconPath="https://res.cloudinary.com/dotdj32as/image/upload/v1724679757/vlc8riyjffv551sdls1r.svg"
-              />             
+              />
               <Componenets.Tech
                 techName="Next JS"
                 iconPath="https://res.cloudinary.com/dotdj32as/image/upload/v1724679753/xye80ihhspwbghxrocll.svg"
@@ -69,6 +69,7 @@ export default function Home() {
                 iconPath="https://res.cloudinary.com/dotdj32as/image/upload/v1724679755/j305tlqj2vemq3l5ywpo.svg"
               />
             </div>
+            <Icons.ArrowDown className="animate-bounce text-primary-foreground"/>
           </div>
           <Image
             src={"/Background_Intro.png"}
