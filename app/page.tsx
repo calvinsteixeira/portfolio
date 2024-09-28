@@ -7,6 +7,9 @@ import * as Componenets from "@/components/index";
 import { Inconsolata } from "next/font/google";
 const inconsolata = Inconsolata({ subsets: ["latin"] });
 
+//UTILS
+import React from "react";
+
 export default function Home() {
   return (
     <div>
@@ -69,7 +72,7 @@ export default function Home() {
                 iconPath="https://res.cloudinary.com/dotdj32as/image/upload/v1724679755/j305tlqj2vemq3l5ywpo.svg"
               />
             </div>
-            <Icons.ArrowDown className="animate-bounce text-primary-foreground"/>
+            <Componenets.MoreContentIndicator />
           </div>
           <Image
             src={"/Background_Intro.png"}
