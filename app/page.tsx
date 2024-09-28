@@ -82,9 +82,9 @@ export default function Home() {
             className="z-0"
           />
         </section>
-        {/* <section></section>
-        <section></section>
-        <section></section> */}
+        <section className="h-[30rem]"></section>
+        {/* <section></section> */}
+        {/* <section></section> */}
       </main>
     </div>
   );

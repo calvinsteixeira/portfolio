@@ -29,7 +29,7 @@ export function MoreContentIndicator(props: Props) {
   return (
     <div
       data-visibilityMoreContentArrow={visibilityMoreContentArrow}
-      className="transition-all ease-in-out delay-150 duration-300 data-[visibilityMoreContentArrow=false]:hidden flex flex-col items-center justify-center gap-4"
+      className="transition-all ease-in-out delay-150 duration-300 data-[visibilityMoreContentArrow=false]:hidden flex flex-col items-center justify-center gap-4 absolute bottom-[12%]"
     >
       <Icons.ArrowDown className={`animate-bounce text-primary-foreground`} />
     </div>
