@@ -1,1 +1,1 @@
-export { CodeXml, ArrowDown } from 'lucide-react'
+export { CodeXml, ArrowDown, TabletSmartphone, ChartNoAxesCombined, UserCheck } from 'lucide-react'

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import * as Icons from "@/icons";
 import * as Componenets from "@/components/index";
+import { Button } from "@/components/ui/button";
 
 //UTILS
 import { Inconsolata } from "next/font/google";
@@ -15,7 +16,7 @@ export default function Home() {
     <div>
       <main>
         {/* INTRO */}
-        <section className="relative w-full h-screen bg-primary overflow-hidden flex justify-center pt-8">
+        <section className="relative w-full h-screen bg-primary overflow-hidden flex justify-center">
           <div className="text-center z-10 text-white space-y-8 flex flex-col items-center">
             <div className="bg-foreground w-24 h-24 rounded-full relative border-2 border-primary">
               <div className="absolute z-10 w-24 h-24 rounded-full border-4 border-background "></div>
@@ -39,7 +40,7 @@ export default function Home() {
                 </p>
                 <h2 className="font-bold text-4xl">Desenvolvedor Front End</h2>
               </div>
-              <p className="text-sm text-primary-foreground">
+              <p className="text-sm text-secondary-foreground">
                 Transformo necessidades em aplicações práticas e evolutivas,
                 usando minha paixão pela tecnologia para desenvolver sistemas
                 que oferecem soluções inovadoras e eficazes, melhorando a vida
@@ -82,8 +83,34 @@ export default function Home() {
             className="z-0"
           />
         </section>
-        <section className="h-[30rem]"></section>
-        {/* <section></section> */}
+        <section className="w-full pb-10">
+          <div className="space-y-4 text-center">
+            <p className={`text-primary text-sm ${inconsolata.className}`}>
+              Meus projetos
+            </p>
+            <h2 className="font-semibold text-xl">Meus projetos incluem</h2>
+          </div>
+          <div className="mt-10 space-y-4">
+            <Componenets.ProjectFeature
+              icon={<Icons.ChartNoAxesCombined />}
+              title="Boas práticas"
+              description="Código limpo e organizado para facilitar a colaboração e manutenção"
+            />
+            <Componenets.ProjectFeature
+              icon={<Icons.TabletSmartphone />}
+              title="Responsividade"
+              description="Mobile first garantindo responsividade total em todos os dispositivos"
+            />
+            <Componenets.ProjectFeature
+              icon={<Icons.UserCheck />}
+              title="UX"
+              description="Experiência do usuário aprimorada com interfaces intuitivas."
+            />
+          </div>
+          <Button size={"sm"} className="mt-6">
+            Acessar projetos
+          </Button>
+        </section>
         {/* <section></section> */}
       </main>
     </div>
