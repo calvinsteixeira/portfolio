@@ -1,5 +1,7 @@
 //COMPONENETS
-import * as Icons from '@/icons'
+import * as Icons from '@/icons';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 //UTILS
 import React from 'react';
@@ -10,9 +12,11 @@ export default function page({}: Props) {
   return (
     <div>
       <main>
-        <div>
-          <Icons.ArrowLeft className='text-foreground'/>
-        </div>
+        <Button asChild variant={'ghost'}>
+          <Link href={'/'}>
+            <Icons.ArrowLeft className="text-foreground" />
+          </Link>
+        </Button>
       </main>
     </div>
   );

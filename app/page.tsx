@@ -3,6 +3,7 @@ import Image from 'next/image';
 import * as Icons from '@/icons';
 import * as Componenets from '@/components/index';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 //UTILS
 import React from 'react';
@@ -76,8 +77,8 @@ export default function Home() {
             />
             <Componenets.ProjectFeature icon={<Icons.UserCheck />} title="UX" description="Experiência do usuário aprimorada com interfaces intuitivas." />
           </div>
-          <Button size={'sm'} className="mt-6 bg-foreground text-background">
-            Acessar projetos
+          <Button asChild size={'sm'} className="mt-6">
+            <Link href={'/projetos'}>Acessar projetos</Link>
           </Button>
         </section>
         <Componenets.Footer />
