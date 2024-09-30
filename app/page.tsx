@@ -61,24 +61,26 @@ export default function Home() {
         {/* PROJETOS */}
         <section className="w-full">
           <div className="space-y-4 text-center">
-            <p className={`text-primary text-sm ${inconsolata.className}`}>Sempre está presente em meus projetos</p>
+            <p className={`text-primary text-sm ${inconsolata.className}`}>Minhas experiências</p>
+            <h2 className={`font-semibold text-foreground ${inconsolata.className}`}>Cenários onde já atuei</h2>
           </div>
           <div className="mt-10 space-y-4">
-            <Componenets.ProjectFeature
-              icon={<Icons.ChartNoAxesCombined />}
-              title="Boas práticas"
-              description="Código limpo e organizado para facilitar a colaboração e manutenção"
+            <Componenets.Experience
+              icon={<Icons.CodeXml/>}
+              title="Web"
+              description="Desenvolvimento de serviços dentro de um portal, mantendo regras de negócio complexas. Além disse também atuei integrando outros devs nos projetos e auxiliando nas melhores práticas de desenvolvimento."
             />
-            <Componenets.ProjectFeature
-              icon={<Icons.TabletSmartphone />}
-              title="Responsividade"
-              description="Mobile first garantindo responsividade total em todos os dispositivos"
+            <Componenets.Experience
+              icon={<Icons.TabletSmartphone/>}
+              title="Mobile"
+              description="Atuei liderando e desenvolvendo aplicações mobile com React Native e Expo, decidindo tencologias e criando abstrações para facilitar o desenvolvimento do restante do time"
             />
-            <Componenets.ProjectFeature icon={<Icons.UserCheck />} title="UX" description="Experiência do usuário aprimorada com interfaces intuitivas." />
+            <Componenets.Experience
+              icon={<Icons.HardDrive />}
+              title="Back end"
+              description="Desenvolvimento de rest api em node js e manutenções rotineiras em sistemas robustos utilizando Lua"
+            />
           </div>
-          <Button asChild size={'sm'} className="mt-6">
-            <Link href={'/projetos'}>Acessar projetos</Link>
-          </Button>
         </section>
         <Componenets.Footer />
       </main>

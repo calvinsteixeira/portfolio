@@ -1,23 +1,24 @@
 //UTILS
 import React from "react";
 import { cn } from "@/lib/utils";
-import { IconNode } from "lucide-react";
+import { IconBaseProps } from "react-icons";
 
 type Props = {
-  icon: React.ReactElement<IconNode>;
+  icon: React.ReactElement<IconBaseProps>;
   title: string;
   description: string;
 };
 
-export function ProjectFeature(props: Props) {
+export function Experience(props: Props) {
   return (
     <div className="py-4 px-6 border-[1px] border-white/10 rounded-lg">
       <div className="space-y-4">
         {React.createElement(props.icon.type, {
           ...props.icon.props,
-          size: 30,
+          strokeWidth: 1,
+          size: 40,
           className: cn(
-            "max-w-max p-[0.40rem] rounded-full bg-gray-200/20 text-white/40"
+            "max-w-max p-[0.40rem] text-primary/60 p-0", props.icon.props.className
           ),
         })}
         <div className="space-y-2">
