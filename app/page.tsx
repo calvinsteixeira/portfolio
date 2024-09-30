@@ -58,7 +58,7 @@ export default function Home() {
             className="z-0 w-full"
           />
         </section>
-        {/* PROJETOS */}
+        {/* EXPERIÊNCIAS */}
         <section className="w-full">
           <div className="space-y-4 text-center">
             <p className={`text-primary text-sm ${inconsolata.className}`}>Minhas experiências</p>
@@ -66,12 +66,12 @@ export default function Home() {
           </div>
           <div className="mt-10 space-y-4">
             <Componenets.Experience
-              icon={<Icons.CodeXml/>}
+              icon={<Icons.CodeXml />}
               title="Web"
               description="Desenvolvimento de serviços dentro de um portal, mantendo regras de negócio complexas. Além disse também atuei integrando outros devs nos projetos e auxiliando nas melhores práticas de desenvolvimento."
             />
             <Componenets.Experience
-              icon={<Icons.TabletSmartphone/>}
+              icon={<Icons.TabletSmartphone />}
               title="Mobile"
               description="Atuei liderando e desenvolvendo aplicações mobile com React Native e Expo, decidindo tencologias e criando abstrações para facilitar o desenvolvimento do restante do time"
             />
@@ -81,7 +81,19 @@ export default function Home() {
               description="Desenvolvimento de rest api em node js e manutenções rotineiras em sistemas robustos utilizando Lua"
             />
           </div>
+          <div className='mt-16 flex flex-col gap-12'>
+            <div className="space-y-4">
+              <p className={`text-primary text-sm ${inconsolata.className}`}>Projetos</p>
+              <h2 className={`font-semibold text-foreground ${inconsolata.className}`}>
+                Sempre que tenho tempo disponível estou aperfeiçoando e aprendendo coisas novas através dos meus projetos pessoais.
+              </h2>
+            </div>
+            <Button asChild>
+              <Link href={'/projetos'}>Acessar projetos</Link>
+            </Button>
+          </div>
         </section>
+        {/* PROJETOS */}
         <Componenets.Footer />
       </main>
     </div>
