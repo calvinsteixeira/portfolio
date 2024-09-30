@@ -16,8 +16,8 @@ export default function Home() {
       <main>
         <Componenets.BackToTop />
         {/* INTRO */}
-        <section className="relative w-screen h-screen -mx-6 -mt-8 pt-12 px-6">
-          <div className="absolute z-20 text-center text-white space-y-8 flex flex-col items-center">
+        <section className="relative w-screen h-screen -mx-6 -mt-8 pt-12 flex items-center justify-center">
+          <div className="absolute z-20 text-center text-white space-y-8 flex flex-col px-6 items-center">
             <div className="bg-foreground w-24 h-24 rounded-full relative border-2 border-primary">
               <div className="absolute z-10 w-24 h-24 rounded-full border-4 border-background "></div>
               <Icons.CodeXml size={25} className="text-primary absolute z-10 bottom-0 right-0" />
@@ -61,8 +61,7 @@ export default function Home() {
         {/* PROJETOS */}
         <section className="w-full">
           <div className="space-y-4 text-center">
-            <p className={`text-primary text-sm ${inconsolata.className}`}>Meus projetos</p>
-            <h2 className="font-semibold text-xl">Meus projetos incluem</h2>
+            <p className={`text-primary text-sm ${inconsolata.className}`}>Sempre está presente em meus projetos</p>
           </div>
           <div className="mt-10 space-y-4">
             <Componenets.ProjectFeature
