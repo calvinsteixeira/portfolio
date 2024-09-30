@@ -5,18 +5,16 @@ import * as Componenets from "@/components/index";
 import { Button } from "@/components/ui/button";
 
 //UTILS
+import React from "react";
 import { Inconsolata } from "next/font/google";
 const inconsolata = Inconsolata({ subsets: ["latin"] });
-
-//UTILS
-import React from "react";
 
 export default function Home() {
   return (
     <div>
       <main>
         {/* INTRO */}
-        <section className="relative w-full h-screen bg-primary overflow-hidden flex justify-center">
+        <section className="relative w-full h-screen bg-primary overflow-hidden flex justify-center pt-12">
           <div className="text-center z-10 text-white space-y-8 flex flex-col items-center">
             <div className="bg-foreground w-24 h-24 rounded-full relative border-2 border-primary">
               <div className="absolute z-10 w-24 h-24 rounded-full border-4 border-background "></div>
@@ -83,6 +81,7 @@ export default function Home() {
             className="z-0"
           />
         </section>
+        {/* PROJETOS */}
         <section className="w-full pb-10">
           <div className="space-y-4 text-center">
             <p className={`text-primary text-sm ${inconsolata.className}`}>
@@ -107,11 +106,11 @@ export default function Home() {
               description="Experiência do usuário aprimorada com interfaces intuitivas."
             />
           </div>
-          <Button size={"sm"} className="mt-6">
+          <Button size={"sm"} className="mt-6 bg-foreground text-background">
             Acessar projetos
           </Button>
         </section>
-        {/* <section></section> */}
+        <Componenets.Footer/>
       </main>
     </div>
   );
