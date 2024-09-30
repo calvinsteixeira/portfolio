@@ -15,8 +15,8 @@ export default function Home() {
       <main>
         <Componenets.BackToTop />
         {/* INTRO */}
-        <section className="relative w-full h-screen bg-primary overflow-hidden flex justify-center pt-12">
-          <div className="text-center z-10 text-white space-y-8 flex flex-col items-center">
+        <section className="relative w-screen h-screen -mx-6 -mt-8 pt-12 px-6">
+          <div className="absolute z-20 text-center text-white space-y-8 flex flex-col items-center">
             <div className="bg-foreground w-24 h-24 rounded-full relative border-2 border-primary">
               <div className="absolute z-10 w-24 h-24 rounded-full border-4 border-background "></div>
               <Icons.CodeXml size={25} className="text-primary absolute z-10 bottom-0 right-0" />
@@ -48,12 +48,17 @@ export default function Home() {
               <Componenets.Tech techName="GitHub" iconPath="https://res.cloudinary.com/dotdj32as/image/upload/v1724679755/ipfxobd46eboijekysh5.svg" />
               <Componenets.Tech techName="GitLab" iconPath="https://res.cloudinary.com/dotdj32as/image/upload/v1724679755/j305tlqj2vemq3l5ywpo.svg" />
             </div>
-            {/* <Componenets.MoreContentIndicator /> */}
           </div>
-          <Image src={'/Background_Intro.png'} alt="Imagem com elementos arredondados nos cantos em cores claras." objectFit="cover" fill className="z-0" />
+          <Image
+            src={'/Background_Intro.png'}
+            alt="Imagem com elementos arredondados nos cantos em cores claras."
+            objectFit="cover"
+            fill
+            className="z-0 w-full"
+          />
         </section>
         {/* PROJETOS */}
-        <section className="w-full pb-10">
+        <section className="w-full">
           <div className="space-y-4 text-center">
             <p className={`text-primary text-sm ${inconsolata.className}`}>Meus projetos</p>
             <h2 className="font-semibold text-xl">Meus projetos incluem</h2>

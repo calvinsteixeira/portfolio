@@ -76,7 +76,10 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  main {
+    @apply px-6 pt-8;
+  }
   section {
-    @apply px-6 pt-8
+    @apply pt-8 py-20
   }
 }

@@ -12,7 +12,7 @@ type Props = {};
 
 export function Footer(props: Props) {
   return (
-    <footer className="relative w-full h-[25rem] bg-primary overflow-hidden flex items-center justify-center px-6">
+    <footer className="relative w-screen h-[25rem] bg-primary overflow-hidden flex items-center justify-center px-6 -mx-6 -mt-8">
       <div className="text-center z-10 text-white space-y-14 flex flex-col items-center">
         <p className={`text-secondary-foreground text-sm ${inconsolata.className}`}>
           Sinta-se a vontade para entrar em contato comigo através dos links abaixo.
