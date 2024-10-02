@@ -16,13 +16,13 @@ type ProjectProps = {
 export function Project(props: ProjectProps) {
   return (
     <div className="space-y-4 border-[1px] border-primary/30 text-foreground/80 px-3 py-4 rounded-md">
-      <div className="flex gap-4">
+      <div className="flex flex-col gap-4">
+        <div className="w-full h-[10rem] relative">
+          <Image src={props.imgPath} alt={props.imgAlt} objectFit="cover" fill className="z-0 rounded-lg" />
+        </div>
         <div className="flex-1 space-y-4">
           <h2 className="font-semibold text-base">{props.name}</h2>
           <p className="text-sm">{props.description}</p>
-        </div>
-        <div className="flex-1 w-full relative">
-          <Image src={props.imgPath} alt={props.imgAlt} objectFit="cover" fill className="z-0 rounded-lg" />
         </div>
       </div>
       <Button size={'sm'} variant={'secondary'} className="w-full text-primary p-0">

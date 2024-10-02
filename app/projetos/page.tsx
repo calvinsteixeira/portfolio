@@ -22,12 +22,12 @@ export default function page({}: Props) {
             </Link>
           </Button>
         </div>
-        <p className={`text-primary text-center ${inconsolata.className}`}>Conheça meus projetos</p>
+        <p className={`text-primary text-center text-lg ${inconsolata.className}`}>Conheça meus projetos</p>
         <div>
           <Componenets.Project
             name="Metro SPStatus"
             description="Esse projeto permite que o usuário consiga ver o status de funcionamento das principais linhas de metrô em São Paulo, além de checar se há restrições na utilização do metrô. Para a alimentação dos dados, hospedei uma API em node que trata as informações e encaminha para o front end."
-            imgPath={'https://source.unsplash.com/random'}
+            imgPath={'https://res.cloudinary.com/dotdj32as/image/upload/v1725227089/chyfpe2zv0sk5ismwbz5.png'}
             imgAlt='Imagem aleatória para teste'
           />
         </div>
