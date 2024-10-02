@@ -76,7 +76,7 @@ export default function Home() {
             </motion.div>
             <motion.div viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
               <Componenets.Experience
-                icon={<Icons.BiDevices />}
+                icon={<Icons.LuSmartphone/>}
                 title="Mobile"
                 description="Atuei liderando e desenvolvendo aplicações mobile com React Native e Expo, decidindo tencologias e criando abstrações para facilitar o desenvolvimento do restante do time"
               />

@@ -18,7 +18,7 @@ export function Experience(props: Props) {
           strokeWidth: 1,
           size: 40,
           className: cn(
-            "max-w-max p-[0.40rem] text-primary/60 p-0", props.icon.props.className
+            "max-w-max p-[0.40rem] text-primary/60 p-0 bg-primary/10 rounded-full p-2", props.icon.props.className
           ),
         })}
         <div className="space-y-2">
