@@ -21,7 +21,7 @@ export default function Home() {
           <div className="absolute z-20 text-center text-white space-y-8 flex flex-col px-6 items-center">
             <div className="bg-foreground w-24 h-24 rounded-full relative border-2 border-primary">
               <div className="absolute z-10 w-24 h-24 rounded-full border-4 border-background "></div>
-              <Icons.CodeXml size={25} className="text-primary absolute z-10 bottom-0 right-0" />
+              <Icons.LuCode2 size={25} className="text-primary absolute z-10 bottom-0 right-0" />
               <Image
                 src={'/profile.jpg'}
                 alt="Imagem com elementos arredondados nos cantos em cores claras."
@@ -38,8 +38,9 @@ export default function Home() {
                 <h2 className="font-bold text-4xl">Desenvolvedor Front End</h2>
               </div>
               <p className="text-sm text-secondary-foreground">
-                Transformo necessidades em aplicações práticas e evolutivas, usando minha paixão pela tecnologia para desenvolver sistemas que oferecem soluções
-                inovadoras e eficazes, melhorando a vida das pessoas que as utilizam.
+                Fiz uma transição de carreira, vindo da área de Marketing, onde atuei por 8 anos e aprendi muito sobre análise, liderança e comportamento de
+                usuários de sistemas. Hoje, atuo como desenvolvedor de software há cerca de 3 anos e tenho como principal foco criar soluções que causem um
+                impacto positivo na vida das pessoas.
               </p>
             </div>
             <div className="flex gap-4 flex-wrap justify-center">
@@ -68,21 +69,21 @@ export default function Home() {
           <div className="mt-10 space-y-4">
             <motion.div viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
               <Componenets.Experience
-                icon={<Icons.CodeXml />}
+                icon={<Icons.LuCode2 />}
                 title="Web"
                 description="Desenvolvimento de serviços dentro de um portal, mantendo regras de negócio complexas. Além disse também atuei integrando outros devs nos projetos e auxiliando nas melhores práticas de desenvolvimento."
               />
             </motion.div>
             <motion.div viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
               <Componenets.Experience
-                icon={<Icons.TabletSmartphone />}
+                icon={<Icons.BiDevices />}
                 title="Mobile"
                 description="Atuei liderando e desenvolvendo aplicações mobile com React Native e Expo, decidindo tencologias e criando abstrações para facilitar o desenvolvimento do restante do time"
               />
             </motion.div>
             <motion.div viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
               <Componenets.Experience
-                icon={<Icons.HardDrive />}
+                icon={<Icons.LuHardDrive />}
                 title="Back end"
                 description="Desenvolvimento de rest api em node js e manutenções rotineiras em sistemas robustos utilizando Lua"
               />
