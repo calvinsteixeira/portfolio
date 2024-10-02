@@ -11,7 +11,7 @@ type Props = {
 
 export function Experience(props: Props) {
   return (
-    <div className="py-4 px-6 border-[1px] border-white/10 rounded-lg">
+    <div className="lg:h-[20rem] lg:flex py-4 px-6 border-[1px] border-white/10 rounded-lg">
       <div className="space-y-4">
         {React.createElement(props.icon.type, {
           ...props.icon.props,

@@ -15,7 +15,7 @@ export function Tech(props: Props) {
   return (
     <div
       className={cn(
-        "px-6 py-1 rounded-full bg-background flex items-center justify-center text-white/70 gap-2",
+        "px-4 md:px-6 py-1 rounded-full bg-background flex items-center justify-center text-white/70 gap-2",
         props.className
       )}
     >

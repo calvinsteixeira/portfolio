@@ -19,10 +19,10 @@ type ProjectProps = {
 
 export function Project(props: ProjectProps) {
   return (
-    <div className="space-y-6 border-[1px] border-primary/30 text-foreground/80 px-3 py-4 rounded-md">
+    <div className="w-full md:flex-1 md:max-w-[22rem] h-auto space-y-6 border-[1px] border-primary/30 text-foreground/80 px-3 py-4 rounded-md">
       <div className="flex flex-col gap-4">
         <h2 className="font-semibold text-base">{props.name}</h2>
-        <div className="w-full max-h-[10rem] h-[10rem] relative">
+        <div className="w-full h-[10rem] min-[375px]:h-[14rem] relative">
           <Image
             src={props.imgPath}
             alt={'Imagem representando a responsividade com um mock de vários dispositivos contendo um preview do conteúdo do projeto'}
