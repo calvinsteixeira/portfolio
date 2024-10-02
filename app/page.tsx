@@ -17,27 +17,27 @@ export default function Home() {
       <main>
         <Componenets.BackToTop />
         {/* INTRO */}
-        <section className="relative w-screen h-screen -mx-6 -mt-8 pt-12 flex items-center justify-center">
+        <section className="relative w-screen h-screen pt-12 flex items-center justify-center">
           <div className="absolute z-20 text-center text-white space-y-8 flex flex-col px-6 items-center">
             <div className="bg-foreground w-24 h-24 rounded-full relative border-2 border-primary">
               <div className="absolute z-10 w-24 h-24 rounded-full border-4 border-background "></div>
               <Icons.LuCode2 size={25} className="text-primary absolute z-10 bottom-0 right-0" />
-              <Image
+              {/* <Image
                 src={'/profile.jpg'}
                 alt="Imagem com elementos arredondados nos cantos em cores claras."
                 objectFit="cover"
                 fill
                 className="z-0 absolute rounded-full"
-              />
+              /> */}
             </div>
-            <div className="space-y-8">
+            <div className="space-y-8 ">
               <div className="space-y-4">
                 <p className={`text-sm ${inconsolata.className}`}>
-                  Olá, meu nome é <span className="text-primary">Calvin Teixeira</span> e sou
+                  {/* Olá, meu nome é <span className="text-primary">Calvin Teixeira</span> e sou */}
                 </p>
-                <h2 className="font-bold text-4xl">Desenvolvedor Front End</h2>
+                {/* <h2 className="font-bold text-4xl">Desenvolvedor Front End</h2> */}
               </div>
-              <p className="text-sm text-secondary-foreground">
+              <p className="text-sm text-secondary-foreground lg:max-w-[65rem]">
                 Fiz uma transição de carreira, vindo da área de Marketing, onde atuei por 8 anos e aprendi muito sobre análise, liderança e comportamento de
                 usuários de sistemas. Hoje, atuo como desenvolvedor de software há cerca de 3 anos e tenho como principal foco criar soluções que causem um
                 impacto positivo na vida das pessoas.
@@ -61,7 +61,7 @@ export default function Home() {
           />
         </section>
         {/* EXPERIÊNCIAS */}
-        <section className="w-full">
+        <section className="w-full bg-gradient-to-b from-[#17181C] to-background">
           <div className="space-y-2 text-center">
             <p className={`text-primary text-lg ${inconsolata.className}`}>Minhas experiências</p>
             <h2 className={`font-semibold text-xl text-foreground ${inconsolata.className}`}>Cenários onde já atuei</h2>
@@ -89,14 +89,14 @@ export default function Home() {
               />
             </motion.div>
           </div>
-          <div className="mt-16 flex flex-col gap-12">
+          <div className="mt-16 flex flex-col gap-8 sm:max-w-[60%] xl:max-w-[40%]">
             <div className="space-y-2">
               <p className={`text-primary text-lg ${inconsolata.className}`}>Projetos</p>
               <h2 className={`font-semibold text-foreground ${inconsolata.className}`}>
                 Sempre que tenho tempo disponível estou aperfeiçoando e aprendendo coisas novas através dos meus projetos pessoais.
               </h2>
             </div>
-            <Button asChild>
+            <Button asChild className='sm:max-w-[60%]'>
               <Link href={'/projetos'}>Acessar projetos</Link>
             </Button>
           </div>

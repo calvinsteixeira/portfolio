@@ -31,8 +31,8 @@ export function BackToTop(props: Props) {
 
   return (
     <div
-      data-visibilityBackToTop={visibilityBackToTop}
-      className="fixed bottom-10 right-4 z-20 max-w-max p-[0.40rem] rounded-full bg-gray-700 text-gray-200 transition-all ease-in-out delay-150 duration-300 data-[visibilityBackToTop=false]:hidden flex flex-col items-center justify-center gap-4"
+      data-visibilitybacktotop={visibilityBackToTop}
+      className="fixed bottom-10 right-4 z-20 max-w-max p-[0.40rem] rounded-full bg-gray-700 text-gray-200 transition-all ease-in-out delay-150 duration-300 data-[visibilitybacktotop=false]:hidden flex flex-col items-center justify-center gap-4"
     >
       <Icons.FaArrowUp onClick={scrollToTop} className={`text-primary-foreground`} />
     </div>

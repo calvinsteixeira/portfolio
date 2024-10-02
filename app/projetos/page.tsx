@@ -9,12 +9,12 @@ import React from 'react';
 import { Inconsolata } from 'next/font/google';
 const inconsolata = Inconsolata({ subsets: ['latin'] });
 
-type Props = {};
+type Props = {}; 
 
 export default function page({}: Props) {
   return (
     <div>
-      <main className="space-y-8">
+      <main className="space-y-8 bg-gradient-to-b from-[#17181C] to-background px-6 lg:px-12 py-20">
         <div>
           <Button asChild variant={'link'} className="p-0">
             <Link href={'/'}>
