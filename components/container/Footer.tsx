@@ -1,12 +1,12 @@
 //COMPONENTS
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import * as Icons from "@/icons";
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import * as Icons from '@/icons';
 
 //UTILS
-import React from "react";
-import { Inconsolata } from "next/font/google";
-const inconsolata = Inconsolata({ subsets: ["latin"] });
+import React from 'react';
+import { Inconsolata } from 'next/font/google';
+const inconsolata = Inconsolata({ subsets: ['latin'] });
 
 type Props = {};
 
@@ -18,36 +18,21 @@ export function Footer(props: Props) {
           Sinta-se a vontade para entrar em contato comigo através dos links abaixo.
         </p>
         <div className="flex flex-col gap-4">
-          <Button
-            size={"lg"}
-            className="bg-secondary text-secondary-foreground gap-2"
-          >
+          <Button variant={'secondary'} size={'lg'} className="gap-2">
             <Icons.BsLinkedin />
             Linkedin
           </Button>
-          <Button
-            size={"lg"}
-            className="bg-secondary text-secondary-foreground gap-2"
-          >
+          <Button variant={'secondary'} size={'lg'} className="gap-2">
             <Icons.BsGithub />
             Github
           </Button>
-          <Button
-            size={"lg"}
-            className="bg-secondary text-secondary-foreground gap-2"
-          >
+          <Button variant={'secondary'} size={'lg'} className="gap-2">
             <Icons.BsWhatsapp />
             WhatsApp
           </Button>
         </div>
       </div>
-      <Image
-        src={"/Background_Intro.png"}
-        alt="Imagem com elementos arredondados nos cantos em cores claras."
-        objectFit="cover"
-        fill
-        className="z-0"
-      />
+      <Image src={'/Background_Intro.png'} alt="Imagem com elementos arredondados nos cantos em cores claras." objectFit="cover" fill className="z-0" />
     </footer>
   );
 }
