@@ -4,6 +4,7 @@ import * as Icons from '@/icons';
 import * as Componenets from '@/components/index';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import * as motion from 'framer-motion/client';
 
 //UTILS
 import React from 'react';
@@ -60,30 +61,36 @@ export default function Home() {
         </section>
         {/* EXPERIÊNCIAS */}
         <section className="w-full">
-          <div className="space-y-4 text-center">
-            <p className={`text-primary text-sm ${inconsolata.className}`}>Minhas experiências</p>
-            <h2 className={`font-semibold text-foreground ${inconsolata.className}`}>Cenários onde já atuei</h2>
+          <div className="space-y-2 text-center">
+            <p className={`text-primary text-lg ${inconsolata.className}`}>Minhas experiências</p>
+            <h2 className={`font-semibold text-xl text-foreground ${inconsolata.className}`}>Cenários onde já atuei</h2>
           </div>
           <div className="mt-10 space-y-4">
-            <Componenets.Experience
-              icon={<Icons.CodeXml />}
-              title="Web"
-              description="Desenvolvimento de serviços dentro de um portal, mantendo regras de negócio complexas. Além disse também atuei integrando outros devs nos projetos e auxiliando nas melhores práticas de desenvolvimento."
-            />
-            <Componenets.Experience
-              icon={<Icons.TabletSmartphone />}
-              title="Mobile"
-              description="Atuei liderando e desenvolvendo aplicações mobile com React Native e Expo, decidindo tencologias e criando abstrações para facilitar o desenvolvimento do restante do time"
-            />
-            <Componenets.Experience
-              icon={<Icons.HardDrive />}
-              title="Back end"
-              description="Desenvolvimento de rest api em node js e manutenções rotineiras em sistemas robustos utilizando Lua"
-            />
+            <motion.div viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
+              <Componenets.Experience
+                icon={<Icons.CodeXml />}
+                title="Web"
+                description="Desenvolvimento de serviços dentro de um portal, mantendo regras de negócio complexas. Além disse também atuei integrando outros devs nos projetos e auxiliando nas melhores práticas de desenvolvimento."
+              />
+            </motion.div>
+            <motion.div viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
+              <Componenets.Experience
+                icon={<Icons.TabletSmartphone />}
+                title="Mobile"
+                description="Atuei liderando e desenvolvendo aplicações mobile com React Native e Expo, decidindo tencologias e criando abstrações para facilitar o desenvolvimento do restante do time"
+              />
+            </motion.div>
+            <motion.div viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
+              <Componenets.Experience
+                icon={<Icons.HardDrive />}
+                title="Back end"
+                description="Desenvolvimento de rest api em node js e manutenções rotineiras em sistemas robustos utilizando Lua"
+              />
+            </motion.div>
           </div>
-          <div className='mt-16 flex flex-col gap-12'>
-            <div className="space-y-4">
-              <p className={`text-primary text-sm ${inconsolata.className}`}>Projetos</p>
+          <div className="mt-16 flex flex-col gap-12">
+            <div className="space-y-2">
+              <p className={`text-primary text-lg ${inconsolata.className}`}>Projetos</p>
               <h2 className={`font-semibold text-foreground ${inconsolata.className}`}>
                 Sempre que tenho tempo disponível estou aperfeiçoando e aprendendo coisas novas através dos meus projetos pessoais.
               </h2>
