@@ -31,15 +31,7 @@ export default function page({}: Props) {
             deployUrl="https://metro-sp-status.vercel.app/"
             repositoryUrl="https://github.com/calvinsteixeira/metro-sp-status"
             imgPath={'https://res.cloudinary.com/dotdj32as/image/upload/v1725227089/chyfpe2zv0sk5ismwbz5.png'}
-          />
-          <Componenets.Project
-            name="Metro SPStatus"
-            description="Esse projeto permite que o usuário consiga ver o status de funcionamento das principais linhas de metrô em São Paulo, além de checar se há restrições na utilização do metrô. Para a alimentação dos dados, hospedei uma API em node que extrai e trata as informações antes de estarem acessíveis no front end."
-            tecnologies='React JS, Typescript, Tailwind, Tanstack Query, Node JS'
-            deployUrl="https://metro-sp-status.vercel.app/"
-            repositoryUrl="https://github.com/calvinsteixeira/metro-sp-status"
-            imgPath={'https://res.cloudinary.com/dotdj32as/image/upload/v1725227089/chyfpe2zv0sk5ismwbz5.png'}
-          />
+          />         
         </div>
       </main>
     </div>
