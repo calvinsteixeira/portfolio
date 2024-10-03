@@ -22,20 +22,20 @@ export default function Home() {
             <div className="bg-foreground w-24 h-24 rounded-full relative border-2 border-primary">
               <div className="absolute z-10 w-24 h-24 rounded-full border-4 border-background "></div>
               <Icons.LuCode2 size={25} className="text-primary absolute z-10 bottom-0 right-0" />
-              {/* <Image
+              <Image
                 src={'/profile.jpg'}
                 alt="Imagem com elementos arredondados nos cantos em cores claras."
                 objectFit="cover"
                 fill
                 className="z-0 absolute rounded-full"
-              /> */}
+              />
             </div>
             <div className="space-y-8 ">
               <div className="space-y-4">
-                {/* <p className={`text-sm ${inconsolata.className}`}>
+                <p className={`text-sm ${inconsolata.className}`}>
                   Olá, meu nome é <span className="text-primary">Calvin Teixeira</span> e sou
-                </p> */}
-                {/* <h2 className="font-bold text-4xl">Desenvolvedor Front End</h2> */}
+                </p>
+                <h2 className="font-bold text-4xl">Desenvolvedor Front End</h2>
               </div>
               <p className="text-sm text-secondary-foreground lg:max-w-[65rem]">
                 Fiz uma transição de carreira, vindo da área de Marketing, onde atuei por 8 anos e aprendi muito sobre análise, liderança e comportamento de
