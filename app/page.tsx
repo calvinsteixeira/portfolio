@@ -11,7 +11,7 @@ import React from 'react';
 import { Inconsolata } from 'next/font/google';
 const inconsolata = Inconsolata({ subsets: ['latin'] });
 
-export default function Home() {
+export default function Home() {  
   return (
     <div>
       <main>
@@ -22,20 +22,20 @@ export default function Home() {
             <div className="bg-foreground w-24 h-24 rounded-full relative border-2 border-primary">
               <div className="absolute z-10 w-24 h-24 rounded-full border-4 border-background "></div>
               <Icons.LuCode2 size={25} className="text-primary absolute z-10 bottom-0 right-0" />
-              <Image
+              {/* <Image
                 src={'/profile.jpg'}
                 alt="Imagem com elementos arredondados nos cantos em cores claras."
                 objectFit="cover"
                 fill
                 className="z-0 absolute rounded-full"
-              />
+              /> */}
             </div>
             <div className="space-y-8 ">
               <div className="space-y-4">
-                <p className={`text-sm ${inconsolata.className}`}>
+                {/* <p className={`text-sm ${inconsolata.className}`}>
                   Olá, meu nome é <span className="text-primary">Calvin Teixeira</span> e sou
-                </p>
-                <h2 className="font-bold text-4xl">Desenvolvedor Front End</h2>
+                </p> */}
+                {/* <h2 className="font-bold text-4xl">Desenvolvedor Front End</h2> */}
               </div>
               <p className="text-sm text-secondary-foreground lg:max-w-[65rem]">
                 Fiz uma transição de carreira, vindo da área de Marketing, onde atuei por 8 anos e aprendi muito sobre análise, liderança e comportamento de
@@ -67,21 +67,21 @@ export default function Home() {
             <h2 className={`font-semibold text-xl text-foreground ${inconsolata.className}`}>Cenários onde já atuei</h2>
           </div>
           <div className="flex flex-col gap-6 mt-10 lg:flex-row lg:gap-8 lg:justify-around lg:items-center lg:mt-14">
-            <motion.div viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
+            <motion.div className='flex-1' viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
               <Componenets.Experience
                 icon={<Icons.LuCode2 />}
                 title="Web"
                 description="Desenvolvimento de serviços dentro de um portal, mantendo regras de negócio complexas. Além disse também atuei integrando outros devs nos projetos e auxiliando nas melhores práticas de desenvolvimento."
               />
             </motion.div>
-            <motion.div viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
+            <motion.div className='flex-1' viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
               <Componenets.Experience
                 icon={<Icons.LuSmartphone />}
                 title="Mobile"
                 description="Atuei liderando e desenvolvendo aplicações mobile com React Native e Expo, decidindo tencologias e criando abstrações para facilitar o desenvolvimento do restante do time"
               />
             </motion.div>
-            <motion.div viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
+            <motion.div className='flex-1' viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
               <Componenets.Experience
                 icon={<Icons.LuHardDrive />}
                 title="Back end"
