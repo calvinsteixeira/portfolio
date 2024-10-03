@@ -39,7 +39,6 @@ export function Project(props: ProjectProps) {
           </div>
         </div>
       </div>
-
       <div className='space-y-2'>
         <Button asChild size={'sm'} variant={'secondary'} className="w-full text-primary p-0">
           <Link className="gap-2" href={props.repositoryUrl}>
