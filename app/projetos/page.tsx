@@ -31,7 +31,15 @@ export default function page({}: Props) {
             deployUrl="https://metro-sp-status.vercel.app/"
             repositoryUrl="https://github.com/calvinsteixeira/metro-sp-status"
             imgPath={'https://res.cloudinary.com/dotdj32as/image/upload/v1725227089/chyfpe2zv0sk5ismwbz5.png'}
-          />         
+          />  
+          <Componenets.Project
+            name="Stocksavor"
+            description="A ideia desse projeto é fazer com que o usuário tenha controle de validade do estoque de mantimentos em casa, podendo visualizar, adicionar, remover e alterar dados."
+            tecnologies='React JS, Typescript, Tailwind, Tanstack Query,  Server Actions, Axios'
+            deployUrl=""
+            repositoryUrl="https://github.com/calvinsteixeira/stocksavor"
+            imgPath={'https://res.cloudinary.com/dotdj32as/image/upload/v1725498650/pi8znacwam5uq0uark4u.png'}
+          />       
         </div>
       </main>
     </div>

@@ -19,7 +19,7 @@ type ProjectProps = {
 
 export function Project(props: ProjectProps) {
   return (
-    <div className="w-full md:flex-1 md:max-w-[22rem] h-auto space-y-6 border-[1px] border-primary/30 text-foreground/80 px-3 py-4 rounded-md">
+    <div className="w-full flex flex-col justify-between md:flex-1 md:max-w-[22rem] h-auto space-y-6 border-[1px] border-primary/30 text-foreground/80 px-3 py-4 rounded-md">
       <div className="flex flex-col gap-4">
         <h2 className="font-semibold text-base">{props.name}</h2>
         <div className="w-full h-[10rem] min-[375px]:h-[14rem] relative">
@@ -39,7 +39,7 @@ export function Project(props: ProjectProps) {
           </div>
         </div>
       </div>
-      <div className='space-y-2'>
+      <div className="space-y-2">
         <Button asChild size={'sm'} variant={'secondary'} className="w-full text-primary p-0">
           <Link className="gap-2" href={props.repositoryUrl}>
             {' '}
@@ -47,11 +47,13 @@ export function Project(props: ProjectProps) {
             GitHub
           </Link>
         </Button>
-        <Button asChild size={'sm'} variant={'secondary'} className="w-full text-primary p-0">
-          <Link className="gap-2" href={props.deployUrl}>
-            <Icons.BsRocketTakeoff /> Deploy
-          </Link>
-        </Button>
+        {props.deployUrl && (
+          <Button asChild size={'sm'} variant={'secondary'} className="w-full text-primary p-0">
+            <Link className="gap-2" href={props.deployUrl}>
+              <Icons.BsRocketTakeoff /> Deploy
+            </Link>
+          </Button>
+        )}
       </div>
     </div>
   );

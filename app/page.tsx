@@ -11,7 +11,7 @@ import React from 'react';
 import { Inconsolata } from 'next/font/google';
 const inconsolata = Inconsolata({ subsets: ['latin'] });
 
-export default function Home() {  
+export default function Home() {
   return (
     <div>
       <main>
@@ -67,21 +67,39 @@ export default function Home() {
             <h2 className={`font-semibold text-xl text-foreground ${inconsolata.className}`}>Cenários onde já atuei</h2>
           </div>
           <div className="flex flex-col gap-6 mt-10 lg:flex-row lg:gap-8 lg:justify-around lg:items-center lg:mt-14">
-            <motion.div className='flex-1' viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
+            <motion.div
+              className="flex-1"
+              viewport={{ once: true }}
+              initial={{ y: '30%', opacity: 0 }}
+              whileInView={{ y: '0%', opacity: 1 }}
+              transition={{ duration: 0.8 }}
+            >
               <Componenets.Experience
                 icon={<Icons.LuCode2 />}
                 title="Web"
                 description="Desenvolvimento de serviços dentro de um portal, mantendo regras de negócio complexas. Além disse também atuei integrando outros devs nos projetos e auxiliando nas melhores práticas de desenvolvimento."
               />
             </motion.div>
-            <motion.div className='flex-1' viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
+            <motion.div
+              className="flex-1"
+              viewport={{ once: true }}
+              initial={{ y: '30%', opacity: 0 }}
+              whileInView={{ y: '0%', opacity: 1 }}
+              transition={{ duration: 0.8 }}
+            >
               <Componenets.Experience
                 icon={<Icons.LuSmartphone />}
                 title="Mobile"
                 description="Atuei liderando e desenvolvendo aplicações mobile com React Native e Expo, decidindo tencologias e criando abstrações para facilitar o desenvolvimento do restante do time"
               />
             </motion.div>
-            <motion.div className='flex-1' viewport={{ once: true }} initial={{ y: '30%', opacity: 0 }} whileInView={{ y: '0%', opacity: 1 }} transition={{ duration: 0.8 }}>
+            <motion.div
+              className="flex-1"
+              viewport={{ once: true }}
+              initial={{ y: '30%', opacity: 0 }}
+              whileInView={{ y: '0%', opacity: 1 }}
+              transition={{ duration: 0.8 }}
+            >
               <Componenets.Experience
                 icon={<Icons.LuHardDrive />}
                 title="Back end"
