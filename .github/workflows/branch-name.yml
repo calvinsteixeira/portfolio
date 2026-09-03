@@ -1,0 +1,25 @@
+name: Branch name
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Nome da branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validar padrão
+        env:
+          BRANCH_NAME: ${{ github.head_ref }}
+        run: |
+          if [[ ! "$BRANCH_NAME" =~ ^(feat|fix|chore|docs|refactor|test|ci|build|perf|hotfix)/[a-z0-9][a-z0-9._-]*$ ]]; then
+            echo "Branch inválida: $BRANCH_NAME"
+            echo "Use um prefixo permitido, por exemplo: feat/nova-secao"
+            exit 1
+          fi
+
+          echo "Branch válida: $BRANCH_NAME"
