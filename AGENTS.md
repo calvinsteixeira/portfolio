@@ -19,11 +19,11 @@ As regras deste arquivo orientam agentes de IA e pessoas que contribuem para o p
 - Use componentes funcionais tipados com TypeScript.
 - Adote composição em vez de herança. Para componentes complexos, prefira componentes compostos, `children`, slots e componentes especializados que possam ser combinados.
 - Mantenha cada componente com responsabilidade única e organize o código por funcionalidade/domínio.
-- Cada componente ou tela deve ter, no mínimo, estes arquivos próximos entre si:
+- Cada componente ou tela deve ter sempre estes três arquivos próximos entre si:
   - `nome-do-componente.tsx`: implementação do componente;
-  - `nome-do-componente.css`: estilos específicos, quando houver;
+  - `nome-do-componente.style.css`: estilos específicos do componente;
   - `nome-do-componente.test.tsx`: testes unitários.
-- Componentes puramente visuais e sem regra própria ainda devem manter a estrutura de teste; o teste pode documentar a renderização e os estados essenciais.
+- Componentes puramente visuais e sem regra própria também devem manter a estrutura de estilo e teste; o teste pode documentar a renderização e os estados essenciais.
 - Use nomes de arquivos em `kebab-case`. Prefira exports nomeados; use export default apenas quando for o componente principal de uma página ou módulo.
 - Componentes de shadcn/ui devem ser adicionados a partir do registry e então customizados localmente. Não instale shadcn/ui como uma biblioteca monolítica.
 
