@@ -16,7 +16,7 @@ jobs:
         env:
           BRANCH_NAME: ${{ github.head_ref }}
         run: |
-          if [[ ! "$BRANCH_NAME" =~ ^(feat|fix|chore|docs|refactor|test|ci|build|perf|hotfix)/[a-z0-9][a-z0-9._-]*$ ]]; then
+          if [[ ! "$BRANCH_NAME" =~ ^(feat|fix)/[a-z0-9][a-z0-9._-]*$ ]]; then
             echo "Branch inválida: $BRANCH_NAME"
             echo "Use um prefixo permitido, por exemplo: feat/nova-secao"
             exit 1
