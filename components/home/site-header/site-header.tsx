@@ -8,10 +8,10 @@ export function SiteHeader() {
   return (
     <header id='cabecalho' className='site-header'>
       <a href='#conteudo' className='site-header__skip'>{t('navigation.skip')}</a>
-      <a href='#inicio' className='flex items-center gap-3 text-sm font-semibold tracking-tight'>
+      <div className='flex items-center gap-3 text-sm font-semibold tracking-tight'>
         <span aria-hidden='true' className='grid size-9 place-items-center rounded-full bg-foreground font-heading text-xs text-background'>{t('profile.initials')}</span>
         <span>{t('profile.name')}</span>
-      </a>
+      </div>
       <nav aria-label={t('navigation.label')} className='order-last w-full md:order-none md:w-auto'>
         <ul className='flex flex-wrap gap-x-6 gap-y-3 text-sm text-foreground/80'>
           {navigation.links.map((link) => (

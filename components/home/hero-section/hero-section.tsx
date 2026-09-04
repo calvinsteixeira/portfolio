@@ -7,7 +7,6 @@ export function HeroSection() {
   const { hero } = homeContent
   return (
     <section id='inicio' aria-labelledby='titulo-inicial' className='hero-section'>
-      <div aria-hidden='true' className='hero-section__glow' />
       <div className='relative z-10 max-w-5xl'>
         <p className='mb-7 flex items-center gap-2 text-sm font-medium text-foreground/75'>
           <span aria-hidden='true' className='size-2 shrink-0 rounded-full bg-primary' />{t('hero.role')}
