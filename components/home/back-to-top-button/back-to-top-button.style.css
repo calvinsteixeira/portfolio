@@ -1,0 +1,23 @@
+@reference '../../../app/globals.css';
+
+@layer components {
+  .back-to-top {
+    @apply pointer-events-none fixed bottom-6 right-6 z-20 grid size-12 translate-y-4 place-items-center rounded-full bg-primary text-primary-foreground opacity-0 shadow-lg transition-all duration-300 hover:bg-primary/90;
+  }
+  .back-to-top--visible {
+    @apply pointer-events-auto translate-y-0 opacity-100;
+    animation: back-to-top-float 2.4s ease-in-out infinite;
+  }
+}
+
+@keyframes back-to-top-float {
+  50% {
+    transform: translateY(-0.3rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top--visible {
+    animation: none;
+  }
+}

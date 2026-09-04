@@ -53,6 +53,15 @@ export const homeContent = {
     items: ['TypeScript', 'React', 'Next.js', 'Design systems', 'Arquitetura front-end', 'Acessibilidade', 'Experiência de produto'],
     note: 'Projetos em desenvolvimento serão apresentados como estudos de caso: contexto, decisões, trade-offs e resultados.',
   },
-  contact: { label: 'Próximo passo', title: 'Vamos resolver algo que importa?', pending: 'Contato em breve' },
+  contact: {
+    label: 'Próximo passo',
+    title: 'Vamos resolver algo que importa?',
+    action: 'Vamos conversar no LinkedIn',
+    href: 'https://www.linkedin.com/in/calvinteixeira/',
+  },
+  backToTop: {
+    label: 'Voltar ao topo',
+    threshold: 480,
+  },
   footer: { copyright: '©', top: 'Voltar ao topo', signature: 'Feito com intenção.' },
 }

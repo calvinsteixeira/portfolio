@@ -16,7 +16,7 @@ export function HeroSection() {
           <em className='font-normal'>{hero.emphasis}</em>{' '}{hero.continuation}{' '}<br />
           {hero.ending}
         </h1>
-        <div className='mt-10 grid max-w-2xl gap-8 md:ml-auto lg:grid-cols-2 lg:items-end'>
+        <div className='hero-section__support'>
           <p className='text-lg leading-8 text-foreground/75 md:text-xl'>{hero.description}</p>
           <ActionLink href='#abordagem'>{hero.action}</ActionLink>
         </div>

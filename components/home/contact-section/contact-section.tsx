@@ -1,4 +1,5 @@
 import { homeContent } from '@/content/home'
+import { ActionLink } from '@/components/action-link/action-link'
 import './contact-section.style.css'
 
 export function ContactSection() {
@@ -10,7 +11,9 @@ export function ContactSection() {
           <p className='text-sm font-medium'>{contact.label}</p>
           <h2 id='titulo-contato' className='mt-5 max-w-2xl font-heading text-5xl font-medium leading-tight tracking-tighter md:text-7xl'>{contact.title}</h2>
         </div>
-        <p className='text-sm font-medium'>{contact.pending}</p>
+        <ActionLink href={contact.href} target='_blank' rel='noreferrer'>
+          {contact.action}
+        </ActionLink>
       </div>
     </section>
   )

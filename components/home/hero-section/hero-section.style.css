@@ -9,3 +9,6 @@
 .hero-section__glow {
   @apply pointer-events-none absolute right-0 top-0 size-96 rounded-full bg-primary/10 blur-3xl;
 }
+.hero-section__support {
+  @apply mt-10 grid max-w-3xl gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end;
+}
