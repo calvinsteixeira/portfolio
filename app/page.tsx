@@ -4,6 +4,7 @@ import { ExpertiseSection } from '@/components/home/expertise-section/expertise-
 import { HeroSection } from '@/components/home/hero-section/hero-section'
 import { SiteFooter } from '@/components/home/site-footer/site-footer'
 import { SiteHeader } from '@/components/home/site-header/site-header'
+import { BackToTopButton } from '@/components/home/back-to-top-button/back-to-top-button'
 import './page.style.css'
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <SiteFooter year={new Date().getFullYear()} />
+      <BackToTopButton />
     </div>
   )
 }
