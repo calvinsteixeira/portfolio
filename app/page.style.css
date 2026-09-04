@@ -1,5 +1,11 @@
 @reference './globals.css';
 
 .home-page {
-  @apply min-h-dvh bg-background text-foreground;
+  @apply relative min-h-dvh overflow-x-clip bg-background text-foreground;
+}
+
+.home-page__glow {
+  @apply pointer-events-none absolute z-0 size-96 rounded-full bg-primary/10 blur-3xl;
+  right: 26%;
+  top: 7rem;
 }

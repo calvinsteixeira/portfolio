@@ -7,4 +7,5 @@ it('preserva o contrato acessível de SiteHeader', () => {
   const navigation = screen.getByRole('navigation', { name: 'Navegação principal' })
   expect(within(navigation).getByRole('link', { name: 'Abordagem' })).toHaveAttribute('href', '#abordagem')
   expect(screen.getByRole('link', { name: 'Pular para o conteúdo' })).toHaveAttribute('href', '#conteudo')
+  expect(screen.queryByRole('link', { name: 'Calvin Teixeira' })).not.toBeInTheDocument()
 })

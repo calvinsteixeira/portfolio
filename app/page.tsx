@@ -10,6 +10,7 @@ import './page.style.css'
 export default function Home() {
   return (
     <div className='home-page'>
+      <div aria-hidden='true' className='home-page__glow' />
       <SiteHeader />
       <main id='conteudo' tabIndex={-1}>
         <HeroSection />
