@@ -161,6 +161,9 @@ const definirTema = usePreferenciasStore((estado) => estado.definirTema)
 - Um token ou variante novo precisa de uma necessidade demonstrável, definição central e documentação da decisão. Não contorne essa regra com estilos inline ou desabilitando o lint.
 - Mantenha os estilos específicos em `nome-do-componente.style.css`, com seletores prefixados pelo componente e tokens do sistema. Utilitários Tailwind podem complementar a composição. Não espalhe estilos da funcionalidade em CSS global.
 - Centralize textos de interface, rótulos acessíveis, mensagens, metadados e conteúdo editorial em módulos tipados por domínio, como `content/home.ts`. Componentes recebem conteúdo via props ou importam o módulo da própria funcionalidade; não embuta copy no JSX.
+- Todo texto estático visível ou acessível deve estar mapeado por uma chave do i18n. O idioma padrão atual é português, mas qualquer texto novo deve ser adicionado ao catálogo de mensagens antes de ser usado no componente.
+- A camada de i18n deve ser tipada, ter um locale padrão explícito e ser a única fonte de resolução das mensagens. Não acesse diretamente valores do catálogo nos componentes e não use strings de interface como fallback.
+- Testes devem consultar os textos por suas chaves ou renderizar através da mesma camada de i18n; textos escritos no próprio teste podem servir apenas como expectativa observável.
 - Conteúdo não é token visual: mantenha os módulos de conteúdo separados do design system. IDs, destinos de navegação, nomes de classes e atributos técnicos podem permanecer locais.
 - Não invente contatos, experiências ou resultados. Conteúdo pessoal provisório deve ser validado com a pessoa responsável antes da publicação.
 

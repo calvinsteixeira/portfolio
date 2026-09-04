@@ -1,16 +1,15 @@
-import { homeContent } from '@/content/home'
+import { t } from '@/messages/pt-BR'
 import './site-footer.style.css'
 
 interface SiteFooterProps { year: number }
 
 export function SiteFooter({ year }: SiteFooterProps) {
-  const { profile, footer } = homeContent
   return (
     <footer id='rodape' className='site-footer'>
-      <p>{footer.copyright}{' '}{year}{' '}{profile.name}</p>
+      <p>{t('footer.copyright')}{' '}{year}{' '}{t('profile.name')}</p>
       <div className='flex flex-wrap gap-5'>
-        <a className='transition-colors hover:text-primary' href='#cabecalho'>{footer.top}</a>
-        <span>{footer.signature}</span>
+        <a className='transition-colors hover:text-primary' href='#cabecalho'>{t('footer.top')}</a>
+        <span>{t('footer.signature')}</span>
       </div>
     </footer>
   )
