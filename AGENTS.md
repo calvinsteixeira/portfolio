@@ -6,6 +6,8 @@ Este projeto é um portfólio construído com Next.js, React, TypeScript, Tailwi
 
 As regras deste arquivo orientam agentes de IA e pessoas que contribuem para o projeto. Em caso de conflito, siga as decisões mais específicas do diretório ou a instrução explícita da tarefa atual.
 
+Este é o arquivo canônico de instruções do projeto para o Codex: `AGENTS.md`, na raiz. Não crie cópias como `agents.mds` ou `agents.md`; nomes alternativos não são descobertos por padrão. Leia também as instruções mais específicas dos diretórios alterados.
+
 ## Fluxo de trabalho
 
 - Trabalhe sempre em uma branch com prefixo permitido: `feat/` ou `fix/`.
@@ -21,6 +23,11 @@ Exemplos de nomes válidos: `feat/secao-sobre` e `fix/menu-mobile`. Nomes como `
 - Use componentes funcionais tipados com TypeScript.
 - Adote composição em vez de herança. Para componentes complexos, prefira componentes compostos, `children`, slots e componentes especializados que possam ser combinados.
 - Mantenha cada componente com responsabilidade única e organize o código por funcionalidade/domínio.
+- Componentização é obrigatória quando melhorar a manutenção, mesmo com um único uso. Extraia seções, navegação, cards e controles que tenham responsabilidade visual, comportamento ou possibilidade de evolução independente.
+- Páginas devem compor componentes de domínio; não concentre a interface inteira, os estilos, os textos e os estados em `page.tsx`.
+- Use elementos HTML nativos dentro dos componentes para implementar a semântica e a estrutura necessárias. Antes de escrever um bloco extenso de HTML na página, procure um componente existente ou crie um componente com responsabilidade clara.
+- Não crie wrappers vazios para cada `div` ou `span`: o limite do componente deve isolar uma responsabilidade real. Preserve HTML semântico, acessibilidade e Server Components; extração não exige estado nem `'use client'`.
+- Mantenha estados e eventos no menor componente responsável pela interação; extraia hooks apenas quando a lógica justificar.
 - Cada componente ou tela deve ter sempre estes três arquivos próximos entre si:
   - `nome-do-componente.tsx`: implementação do componente;
   - `nome-do-componente.style.css`: estilos específicos do componente;
@@ -146,6 +153,17 @@ const definirTema = usePreferenciasStore((estado) => estado.definirTema)
 - Prefira feedback claro para carregamento, erro, vazio e sucesso. Microinterações devem ser sutis e não bloquear a tarefa.
 - Use Tailwind e os tokens do design system; não crie valores arbitrários quando já houver um token equivalente.
 
+## Design system e conteúdo
+
+- As fontes de verdade são `components.json` (shadcn/ui base-luma, base olive, Lucide), `app/globals.css` (tokens e temas), `app/layout.tsx` (fontes) e os componentes existentes. Leia essas definições antes de alterar a interface.
+- Siga o design system com rigor: use os tokens semânticos de cor, tipografia, espaçamento, bordas, raios e foco. Não substitua a paleta, invente variantes ou altere tokens globais para acomodar uma preferência estética local.
+- Não use cores literais (hex, RGB, HSL ou OKLCH) fora da definição central de tokens, nem classes arbitrárias quando existir um token equivalente. Use, por exemplo, `bg-primary`, `text-primary-foreground`, `border-border` e `rounded-lg`.
+- Um token ou variante novo precisa de uma necessidade demonstrável, definição central e documentação da decisão. Não contorne essa regra com estilos inline ou desabilitando o lint.
+- Mantenha os estilos específicos em `nome-do-componente.style.css`, com seletores prefixados pelo componente e tokens do sistema. Utilitários Tailwind podem complementar a composição. Não espalhe estilos da funcionalidade em CSS global.
+- Centralize textos de interface, rótulos acessíveis, mensagens, metadados e conteúdo editorial em módulos tipados por domínio, como `content/home.ts`. Componentes recebem conteúdo via props ou importam o módulo da própria funcionalidade; não embuta copy no JSX.
+- Conteúdo não é token visual: mantenha os módulos de conteúdo separados do design system. IDs, destinos de navegação, nomes de classes e atributos técnicos podem permanecer locais.
+- Não invente contatos, experiências ou resultados. Conteúdo pessoal provisório deve ser validado com a pessoa responsável antes da publicação.
+
 ## Acessibilidade
 
 - Use HTML semântico antes de ARIA. Todo controle interativo deve ser operável por teclado e ter nome acessível.
@@ -217,3 +235,16 @@ export function validarContato(input: ContatoInput) {
 - Preserve o design system e os padrões existentes antes de criar novas variantes.
 - Seja direto: não adicione comentários ou camadas de abstração sem que expliquem uma decisão necessária.
 - Ao finalizar uma alteração, descreva o que mudou, quais validações foram executadas e qualquer limitação restante.
+- Execute também `pnpm test` ao alterar componentes. Testes devem renderizar os componentes e verificar contratos observáveis; não teste strings fixas desconectadas da implementação.
+- Antes de concluir, revise: páginas compostas por responsabilidades; estilos isolados; textos centralizados; uso dos tokens existentes; semântica, navegação por teclado e responsividade.
+- O lint verifica textos literais no JSX, rótulos acessíveis literais e valores arbitrários em componentes. Ele complementa a revisão; decisões sobre limites dos componentes e adequação semântica dos tokens ainda exigem revisão.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

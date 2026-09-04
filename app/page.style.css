@@ -1,0 +1,5 @@
+@reference './globals.css';
+
+.home-page {
+  @apply min-h-dvh bg-background text-foreground;
+}

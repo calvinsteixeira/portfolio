@@ -1,0 +1,11 @@
+@reference '../../../app/globals.css';
+
+.hero-section {
+  @apply relative mx-auto max-w-7xl overflow-hidden px-6 pb-20 pt-14 md:px-10 md:pb-28 md:pt-24 lg:px-16;
+}
+.hero-section__title {
+  @apply font-heading text-5xl font-medium leading-none tracking-tighter sm:text-7xl lg:text-8xl xl:text-9xl;
+}
+.hero-section__glow {
+  @apply pointer-events-none absolute right-0 top-0 size-96 rounded-full bg-primary/10 blur-3xl;
+}
