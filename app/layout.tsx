@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Manrope, Public_Sans } from 'next/font/google'
 
 import './globals.css'
 import { cn } from '@/lib/utils'
-import { homeContent } from '@/content/home'
+import { t, locale } from '@/messages/pt-BR'
 
 const manropeHeading = Manrope({ subsets: ['latin'], variable: '--font-heading' })
 
@@ -20,13 +20,14 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  ...homeContent.metadata,
+  title: t('metadata.title'),
+  description: t('metadata.description'),
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
-      lang="pt-BR"
+      lang={locale}
       className={cn(
         'h-full',
         'antialiased',

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { ArrowUp } from 'lucide-react'
 
 import { homeContent } from '@/content/home'
+import { t } from '@/messages/pt-BR'
 import { cn } from '@/lib/utils'
 
 import './back-to-top-button.style.css'
@@ -25,7 +26,7 @@ export function BackToTopButton() {
 
   return (
     <a
-      aria-label={backToTop.label}
+      aria-label={t('backToTop.label')}
       aria-hidden={!isVisible}
       className={cn('back-to-top', isVisible && 'back-to-top--visible')}
       href='#cabecalho'

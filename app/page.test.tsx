@@ -13,7 +13,7 @@ it('conecta todos os atalhos a destinos existentes e únicos', () => {
     expect(document.querySelectorAll(href!)).toHaveLength(1)
   }
 
-  expect(screen.getByRole('link', { name: 'Vamos conversar no LinkedIn' })).toHaveAttribute(
+  expect(screen.getByRole('link', { name: 'Acesse meu LinkedIn' })).toHaveAttribute(
     'href',
     'https://www.linkedin.com/in/calvinteixeira/',
   )
