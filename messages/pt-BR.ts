@@ -44,7 +44,10 @@ export const messages = {
   expertise: {
     label: 'Conhecimentos',
     title: 'Ferramentas são meio. Critério é o diferencial.',
+    stackLabel: 'Stack de domínio',
     description: 'Minha base é o desenvolvimento front-end moderno, com interesse especial em sistemas que equilibram qualidade de código, performance e uma experiência cuidadosa.',
+    aiLabel: 'IA no fluxo de desenvolvimento',
+    aiDescription: 'Na prática, incorporo agentes ao processo de engenharia para investigar, prototipar e automatizar tarefas repetitivas. Eu reviso, questiono e decido: a IA acelera o caminho, mas a qualidade do resultado continua sob minha responsabilidade.',
     itemOne: 'TypeScript',
     itemTwo: 'React',
     itemThree: 'Next.js',
@@ -52,6 +55,11 @@ export const messages = {
     itemFive: 'Arquitetura front-end',
     itemSix: 'Acessibilidade',
     itemSeven: 'Experiência de produto',
+    aiItemOne: 'IDEs com agentes integrados',
+    aiItemTwo: 'Fluxos agênticos de desenvolvimento',
+    aiItemThree: 'Orquestração de agentes na pipeline',
+    aiItemFour: 'Desenvolvimento orientado por contexto',
+    aiItemFive: 'Automação assistida por IA',
     note: 'Projetos em desenvolvimento serão apresentados como estudos de caso: contexto, decisões, trade-offs e resultados.',
   },
   contact: {
@@ -106,7 +114,10 @@ export type MessageKey =
   | 'approach.principleThreeDescription'
   | 'expertise.label'
   | 'expertise.title'
+  | 'expertise.stackLabel'
   | 'expertise.description'
+  | 'expertise.aiLabel'
+  | 'expertise.aiDescription'
   | 'expertise.note'
   | 'expertise.itemOne'
   | 'expertise.itemTwo'
@@ -115,6 +126,11 @@ export type MessageKey =
   | 'expertise.itemFive'
   | 'expertise.itemSix'
   | 'expertise.itemSeven'
+  | 'expertise.aiItemOne'
+  | 'expertise.aiItemTwo'
+  | 'expertise.aiItemThree'
+  | 'expertise.aiItemFour'
+  | 'expertise.aiItemFive'
   | 'contact.label'
   | 'contact.title'
   | 'contact.action'

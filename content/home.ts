@@ -20,6 +20,7 @@ export const homeContent = {
   },
   expertise: {
     items: ['expertise.itemOne', 'expertise.itemTwo', 'expertise.itemThree', 'expertise.itemFour', 'expertise.itemFive', 'expertise.itemSix', 'expertise.itemSeven'] as const,
+    aiItems: ['expertise.aiItemOne', 'expertise.aiItemTwo', 'expertise.aiItemThree', 'expertise.aiItemFour', 'expertise.aiItemFive'] as const,
   },
   contact: { href: 'https://www.linkedin.com/in/calvinteixeira/' },
   backToTop: { threshold: 480 },
